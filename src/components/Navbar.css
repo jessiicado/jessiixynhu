@@ -1,0 +1,10 @@
+.ToggleScreen {
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+}
+img {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
