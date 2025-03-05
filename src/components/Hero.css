@@ -1,26 +1,86 @@
-h1 {
-  font-family: "Arapey", Arial;
-  font-weight: 400;
-  font-size: 5rem;
+@import "tailwindcss";
+
+h1,
+h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   padding: 0;
   margin: 0;
-  justify-content: center;
-  align-items: center;
-  display: flex;
 }
 
-p {
-  font-family: "Inter", sans-serif;
-  margin: 0;
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  background: linear-gradient(
+    rgb(89, 63, 92) 20%,
+    #797070 30%,
+    #858383 70%,
+    #c0baba 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 4s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Fixed elements */
+.ToggleScreen {
+  position: fixed;
+  top: 0.5rem;
+  right: 1rem;
+}
+
+img {
+  position: fixed;
+  top: 0.5rem;
+  left: 1rem;
+}
+
+/* Hero Section */
+.hero-container {
+  display: flex;
+  flex-direction: column; /* Allow vertical layout */
+  justify-content: center; /* Vertically center the content */
+  align-items: flex-start; /* Align text to the left */
+  position: relative;
+  height: calc(
+    100vh - 60px
+  ); /* Full height minus navbar height (adjust navbar height here if needed) */
+  padding-top: 60px; /* Space for navbar */
+  padding-bottom: 0;
+}
+
+.hero-text {
+  padding-left: 5rem; /* Adjusted padding for text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .coverphoto {
-  position: fixed;
-  height: 100vh;
+  position: absolute;
+  left: 60%;
+  top: 30%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 25%;
-  left: 50%;
-  border-radius: 50%;
 }

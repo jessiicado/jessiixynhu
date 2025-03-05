@@ -1,15 +1,32 @@
 .ToggleScreen {
   position: fixed;
-  top: 2rem;
+  top: 0.5rem;
   right: 1rem;
 }
 img {
   position: fixed;
-  top: 1rem;
+  top: 0.5rem;
   left: 1rem;
 }
 
+/* Navigation styles */
+.Navigation a {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+
 .Navigation {
-  padding-bottom: 1.5rem;
-  border-bottom: 2px solid black;
+  display: flex;
+  gap: 10rem;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 1.5rem; /* Adjusted for space from top */
+  left: 0;
+  width: 100%;
+  font-family: "Atkinson Hyperlegible Mono", sans-serif;
+  overflow: hidden;
+  z-index: 1000; /* Ensures navbar stays above other content */
 }
