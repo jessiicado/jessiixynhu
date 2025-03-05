@@ -17,7 +17,7 @@ const ToggleMode = () => {
     <img
       src="dark_logo.png"
       alt="logo"
-      style={{ width: "75px", height: "75px" }}
+      style={{ width: "50px", height: "50px" }}
       onClick={isReload}
     />;
   };
@@ -26,7 +26,7 @@ const ToggleMode = () => {
     <img
       src="light_logo.png"
       alt="logo"
-      style={{ width: "75px", height: "75px" }}
+      style={{ width: "50px", height: "50px", overflow: "hidden" }}
       onClick={isReload}
     />;
   };
@@ -47,7 +47,7 @@ const ToggleMode = () => {
         <img
           src={isDarkMode ? dark_logo : light_logo}
           alt="logo"
-          style={{ width: "100px", height: "100px" }}
+          style={{ width: "75px", height: "75px" }}
           onClick={isReload}
         />
       </div>

@@ -28,6 +28,8 @@
   left: 0;
   width: 100%;
   font-family: "Atkinson Hyperlegible Mono", sans-serif;
+  font-size: 1rem;
+  overflow: hidden;
 }
 
 body a {
@@ -61,7 +63,9 @@ body.dark a {
   /* Dark mode navbar */
   color: white;
 }
-
+body.dark .Navigation {
+  border-bottom: solid 2px white;
+}
 .ToggleScreen {
   position: fixed;
   top: 2rem;

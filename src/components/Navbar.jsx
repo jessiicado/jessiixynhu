@@ -4,9 +4,9 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <nav className="Navigation">
-      <a href="#Home">Home</a>
-      <a href="#Projects">Projects</a>
-      <a href="#Contact">Contact</a>
+      <a href="#Home">HOME</a>
+      <a href="#Projects">PROJECTS</a>
+      <a href="#Contact">CONTACT</a>
     </nav>
   );
 }

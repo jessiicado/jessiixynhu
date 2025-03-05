@@ -1,11 +1,22 @@
 import React from "react";
+import "./Hero.css";
+import coverphoto from "../assets/coverphoto.jpeg";
+
 // import coverphoto from "./assets/coverphoto.jpeg";
 const Hero = () => {
   return (
-    <div className="hero">
-      <h1 className="header-title">Hi, I'm Jessica</h1>
-
-      {/* <img src="coverphoto.jpg" alt="coverphoto" /> */}
+    <div className="hero-container">
+      <img
+        src={coverphoto}
+        alt="coverphoto"
+        className="coverphoto"
+        style={{
+          width: "350px",
+          height: "500px",
+        }}
+      />
+      <h1 className="header-title">JESSICA DO</h1>
+      <p className="header-subtitle">A Frontend Developer</p>
     </div>
   );
 };
