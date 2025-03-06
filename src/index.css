@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
 :root {
-  padding: 0;
-  margin: 0;
-
   /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
@@ -11,10 +8,10 @@
   /* Light mode Colors */
   --light-font-color: #2b2b2b;
   --light-background-color: #f5f5f5;
-  --light-accent-hover-color: #d6c5e0;
+  --light-accent-hover-color: #92c1ff;
   /* Dark mode Colors */
   --dark-font-color: #ffffff;
-  --dark-background-color: #3b3b3b;
+  --dark-background-color: #121212;
 
   color-scheme: light dark;
   font-synthesis: none;
@@ -25,58 +22,48 @@
 
 html,
 body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+html {
   margin: 0;
   font-family: Arial, sans-serif;
-  height: 100%; /* Ensure the body and html fill the viewport */
+  height: 100vh; /* Ensure the body and html fill the viewport */
   scroll-behavior: smooth; /* Smooth scrolling for the page */
 }
 
-body a {
-  font-size: 25px;
-  font-weight: 500;
-  text-decoration: none;
-  color: var(--light-font-color);
-}
-a:hover {
-  color: var(--light-accent-hover-color);
-}
-
-body.dark a:hover {
-  color: var(--light-accent-hover-color);
-}
 body {
   margin: 0;
+  max-height: 100vh;
   display: flex;
   place-items: center;
   background-color: var(--light-background-color);
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark Mode */
-body.dark {
-  background-color: #121212;
-  color: white;
-}
-
-body.dark a {
-  /* Dark mode navbar */
-  color: white;
-}
-body.dark .Navigation {
-  border-bottom: solid 2px white;
+.hero-section {
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  border-bottom: 5px solid orange;
 }
 
 /* About Section */
 .about-section {
+  margin: 0;
+  padding: 0;
   background-color: #f0f0f0;
-  text-align: center;
-  min-height: 600px; /* Ensure the About section takes up enough space */
-  border-top: 2px solid #ccc; /* Optional: For visual separation */
+  text-align: center; /* Ensure the About section takes up enough space */
+  border-top: 2px solid #110c0c; /* Optional: For visual separation */
 }
 
 .ToggleScreen {
   position: fixed;
-  top: 0.5rem;
+  top: 1rem;
   right: 1rem;
   z-index: 2000; /* Ensure it's on top of other fixed elements */
 }

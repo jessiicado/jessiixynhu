@@ -1,32 +1,120 @@
-.ToggleScreen {
-  position: fixed;
-  top: 0.5rem;
-  right: 1rem;
-}
-img {
-  position: fixed;
-  top: 0.5rem;
-  left: 1rem;
-}
-
 /* Navigation styles */
-.Navigation a {
-  margin: 0;
-  padding-top: 0;
-  padding-bottom: 1rem;
-  font-size: 1rem;
+
+a:hover {
+  color: var(--light-accent-hover-color);
 }
 
+/* General Navigation Styles */
 .Navigation {
+  display: flex;
+  justify-content: center; /* Centering the navbar */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 2px solid black;
+  z-index: 1000;
+}
+
+/* Logo (Optional) */
+.logo {
+  position: absolute;
+  left: 1rem; /* Keeps logo aligned */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Centered Navigation Links */
+.nav-links {
   display: flex;
   gap: 10rem;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 1.5rem; /* Adjusted for space from top */
-  left: 0;
-  width: 100%;
-  font-family: "Atkinson Hyperlegible Mono", sans-serif;
-  overflow: hidden;
-  z-index: 1000; /* Ensures navbar stays above other content */
+  list-style: none;
+}
+
+.nav-links li a {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--light-font-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: var(--light-accent-hover-color);
+}
+
+/* Mobile Menu Button */
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 4rem;
+  }
+}
+/* Medium screens: Reduce gap */
+@media (max-width: 1024px) {
+  .logos {
+    top: 0.75rem;
+    left: 1rem;
+  }
+
+  .resume-btn {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .nav-links {
+    gap: 3rem;
+  }
+}
+
+/* Small screens: Further reduce gap */
+@media (max-width: 768px) {
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ToggleScreen {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+
+  .Navigation {
+    padding-top: 2rem;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 1rem 0;
+    display: none; /* Hidden by default */
+  }
+
+  .nav-links.open {
+    display: flex; /* Show when menu is open */
+  }
+
+  .nav-links.hidden {
+    display: none;
+  }
 }

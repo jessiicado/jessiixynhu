@@ -1,4 +1,4 @@
-import React, { use, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Hero.css";
 import coverphoto from "../assets/coverphoto.jpg";
 
@@ -20,7 +20,10 @@ function Hero() {
   }, []);
 
   return (
-    <section className="hero-container">
+    <section
+      className="hero-section min-h-screen flex items-center justify-center relative"
+      id="Home"
+    >
       <div className="hero-text">
         <h1 className="header-title">Hi, I'm Jessica</h1>
         <h2 className="header-subtitle">

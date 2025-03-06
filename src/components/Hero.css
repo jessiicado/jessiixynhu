@@ -1,19 +1,21 @@
 @import "tailwindcss";
 
-h1,
-h2 {
+.hero-text {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-style: normal;
   padding: 0;
   margin: 0;
+  position: absolute;
+  left: 15%;
+  top: 50%;
 }
 
-h1 {
+.hero-text h1 {
   font-size: 5rem;
 }
 
-h2 {
+.hero-text h2 {
   font-size: 2rem;
   background: linear-gradient(
     rgb(89, 63, 92) 20%,
@@ -37,45 +39,7 @@ h2 {
   }
 }
 
-/* Fixed elements */
-.ToggleScreen {
-  position: fixed;
-  top: 0.5rem;
-  right: 1rem;
-}
-
-img {
-  position: fixed;
-  top: 0.5rem;
-  left: 1rem;
-}
-
-/* Hero Section */
-.hero-container {
-  display: flex;
-  flex-direction: column; /* Allow vertical layout */
-  justify-content: center; /* Vertically center the content */
-  align-items: flex-start; /* Align text to the left */
-  position: relative;
-  height: calc(
-    100vh - 60px
-  ); /* Full height minus navbar height (adjust navbar height here if needed) */
-  padding-top: 60px; /* Space for navbar */
-  padding-bottom: 0;
-}
-
-.hero-text {
-  padding-left: 5rem; /* Adjusted padding for text */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
 .coverphoto {
-  position: absolute;
-  left: 60%;
-  top: 30%;
   width: 500px;
   height: 500px;
   border-radius: 50%;
