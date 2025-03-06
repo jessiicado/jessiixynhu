@@ -81,13 +81,25 @@ body.dark .resume-btn:hover {
 }
 @media (max-width: 768px) {
   .logos {
-    top: 0.75rem;
+    top: 0rem;
     left: 1rem;
   }
 
   .resume-btn {
     top: 0.5rem;
-    right: 0.5rem;
+    right: 7rem;
+    
+  }
+  
+  body.dark .resume-btn {
+    top: 0.5rem;
+    right: 7rem;
+    
+  }
+  
+  .ToggleScreen {
+    top: 0.5rem;
+    right: 3rem;
   }
 
   /* Dark mode styles for the nav-links */
@@ -125,7 +137,4 @@ body.dark .resume-btn:hover {
     overflow: hidden;
   }
 
-  .logos img {
-    max-width: 80px; /* Smaller logo for mobile */
-  }
 }

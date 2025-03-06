@@ -21,7 +21,7 @@ function Hero() {
 
   return (
     <section
-      className="hero-section min-h-screen flex items-center justify-center relative"
+      className="hero-section relative"
       id="Home"
     >
       <div className="hero-text">

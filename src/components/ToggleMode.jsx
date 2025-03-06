@@ -49,6 +49,7 @@ const ToggleMode = () => {
         </button>
       </div>
       <button
+      className="toggle-btn"
         onClick={() => setIsDarkMode(!isDarkMode)}
         style={{ border: "none", cursor: "pointer" }}
       >

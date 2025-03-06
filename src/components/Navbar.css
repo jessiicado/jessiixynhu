@@ -81,13 +81,10 @@ a:hover {
   }
 }
 
-/* Small screens: Further reduce gap */
-@media (max-width: 768px) {
-}
 /* Responsive Design */
 @media (max-width: 768px) {
   .ToggleScreen {
-    display: none;
+    display: block;
   }
   .menu-button {
     display: block;
@@ -108,10 +105,12 @@ a:hover {
     gap: 15px;
     padding: 1rem 0;
     display: none; /* Hidden by default */
+    transition: 3s ease-in;
   }
 
   .nav-links.open {
     display: flex; /* Show when menu is open */
+    transition: 0.3s ease-in;
   }
 
   .nav-links.hidden {

@@ -53,13 +53,13 @@ body {
 }
 
 /* About Section */
-.about-section {
+/* .about-section {
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
-  text-align: center; /* Ensure the About section takes up enough space */
-  border-top: 2px solid #110c0c; /* Optional: For visual separation */
-}
+  text-align: center; 
+  border-top: 2px solid #110c0c; 
+} */
 
 .ToggleScreen {
   position: fixed;
