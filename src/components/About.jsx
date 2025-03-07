@@ -1,10 +1,11 @@
  import React from "react";
- import "../index.css";
+ import "./About.css";
+
  const About = () => {
    return (
      <section className="about-section" id="About">
 
-       <div className="">
+       <div className="about-container">
          <h2 className="about-text">
            I’m a passionate Computer Science student with a drive to turn ideas
            into innovative realities. With a keen interest in 3D modeling and

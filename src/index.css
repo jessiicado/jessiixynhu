@@ -20,6 +20,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
 html,
 body {
   padding: 0;
@@ -36,8 +41,8 @@ html {
 
 body {
   margin: 0;
-  max-height: 100vh;
-  display: flex;
+  height: 100vh;
+  display: block;
   place-items: center;
   background-color: var(--light-background-color);
   transition: background-color 0.3s, color 0.3s;
@@ -47,19 +52,21 @@ body {
   width: 100vw; /* Full width of the viewport */
   height: 100vh; /* Full height of the viewport */
   display: flex;
+  padding-top: 1rem;
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
   border-bottom: 5px solid orange;
+  overflow: hidden;
 }
 
 /* About Section */
-/* .about-section {
+.about-section {
   margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
+  background-color: var(--dark-background-color);
   text-align: center; 
-  border-top: 2px solid #110c0c; 
-} */
+  border-bottom: 2px solid #5e24a4; 
+  scroll-snap-type: inherit;
+}
 
 .ToggleScreen {
   position: fixed;
