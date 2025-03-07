@@ -20,17 +20,15 @@ function Hero() {
   }, []);
 
   return (
-    <section
-      className="hero-section relative"
-      id="Home"
-    >
-      <div className="hero-text">
+    <section className="hero-section" id="Home">
+      {/* <body className="about">ABOUT</body> */}
+      <div className="hero-text ">
         <h1 className="header-title">Hi, I'm Jessica</h1>
         <h2 className="header-subtitle">
           <span className="PositionWord">{positionsList[index]}</span>
         </h2>
+        <img src={coverphoto} alt="coverphoto" className="coverphoto" />
       </div>
-      <img src={coverphoto} alt="coverphoto" className="coverphoto" />
     </section>
   );
 }

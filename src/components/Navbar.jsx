@@ -16,6 +16,13 @@ function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMobile]);
 
+  const ResumeRoute = () => {
+    window.open(
+      "https://drive.google.com/file/d/1TFGSA4vUx0toEmaZjnIWHsd-pirPS-BS/view?usp=sharing",
+      "_blank"
+    );
+  };
+
   return (
     //if isMobile is true, add the hidden class, else add the flex class
     <nav className="Navigation">
@@ -26,7 +33,7 @@ function Navbar() {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle Menu"
         >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          {menuOpen ? <X size={40} /> : <Menu size={40} />}
         </button>
       )}
 
@@ -48,6 +55,12 @@ function Navbar() {
           <a href="#Contact">CONTACT</a>
         </li>
       </ul>
+
+      <div className="resumebtn">
+        <button onClick={ResumeRoute} className="resume-btn">
+          Resume{" "}
+        </button>
+      </div>
     </nav>
   );
 }

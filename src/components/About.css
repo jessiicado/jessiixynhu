@@ -1,17 +1,12 @@
-.about-section {
-    height: 100vh;
-}
-
-h2{
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    font-size: 2rem;
-    color: white;
+h2 {
+  font-family: "Pixelify sans", sans-serif;
+  font-weight: 500;
+  color: white;
 }
 
 .about-text {
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    flex-direction: column;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
 }

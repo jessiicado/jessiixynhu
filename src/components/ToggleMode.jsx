@@ -14,13 +14,6 @@ const ToggleMode = () => {
     window.location.reload();
   };
 
-  const ResumeRoute = () => {
-    window.open(
-      "https://drive.google.com/file/d/1TFGSA4vUx0toEmaZjnIWHsd-pirPS-BS/view?usp=sharing",
-      "_blank"
-    );
-  };
-
   //adds classname of Dark for dark mode
   useEffect(() => {
     if (isDarkMode) {
@@ -43,13 +36,8 @@ const ToggleMode = () => {
         />
       </div>
 
-      <div className="resumebtn">
-        <button onClick={ResumeRoute} className="resume-btn">
-          Resume{" "}
-        </button>
-      </div>
       <button
-      className="toggle-btn"
+        className="toggle-btn"
         onClick={() => setIsDarkMode(!isDarkMode)}
         style={{ border: "none", cursor: "pointer" }}
       >
