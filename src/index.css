@@ -8,7 +8,7 @@
   /* Light mode Colors */
   --light-font-color: #2b2b2b;
   --light-background-color: #f5f5f5;
-  --light-accent-hover-color: #92c1ff;
+  --light-accent-hover-color: #cbb2d6;
   /* Dark mode Colors */
   --dark-font-color: #ffffff;
   --dark-background-color: #121212;
@@ -49,8 +49,8 @@ body {
 }
 
 .hero-section {
-  width: 100vw; /* Full width of the viewport */
-  height: 100vh; /* Full height of the viewport */
+  width: 100vw;
+  height: 200vh;
   display: flex;
   padding-top: 0rem;
   margin: 0;
@@ -59,13 +59,14 @@ body {
   align-items: center;
   border-bottom: 5px solid orange;
   overflow: hidden;
+  z-index: 0;
 }
 
 /* About Section */
 .about-section {
   margin: 0;
   min-height: 100vh;
-  background-color: var(--light-accent-hover-color);
+  background-color: beige;
   text-align: center;
   border-bottom: 2px solid #5e24a4;
   scroll-snap-type: proximity;

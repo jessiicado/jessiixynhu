@@ -27,11 +27,11 @@ const ToggleMode = () => {
   return (
     <div className="ToggleScreen">
       {/* Dark/Light Mode Logo Toggle */}
-      <div className="logos">
+      <div className="logos fixed top-2 left-2">
         <img
           src={isDarkMode ? dark_logo : light_logo}
           alt="logo"
-          style={{ width: "60px", height: "60px" }}
+          style={{ width: "70px", height: "70px" }}
           onClick={isReload}
         />
       </div>

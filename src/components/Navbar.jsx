@@ -56,7 +56,7 @@ function Navbar() {
         </li>
       </ul>
 
-      <div className="resumebtn">
+      <div className="resumebtn fixed left-20 top-5">
         <button onClick={ResumeRoute} className="resume-btn">
           Resume{" "}
         </button>

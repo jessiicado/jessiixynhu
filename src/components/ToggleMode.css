@@ -16,19 +16,13 @@ body {
 /* Dark Mode */
 body.dark {
   background-color: #121212;
+}
+body.dark .header-title {
   color: white;
 }
-
 body.dark a {
   /* Dark mode navbar */
   color: white;
-}
-
-.logos {
-  position: fixed;
-  top: 0.75rem;
-  left: 1rem;
-  z-index: 1000;
 }
 
 body.dark .Navigation {
@@ -42,8 +36,6 @@ body.dark a:hover {
 body.dark .resume-btn {
   background-color: var(--dark-background-color);
   position: fixed;
-  top: 1.25rem;
-  left: 4rem;
   color: var(--light-background-color);
   padding: 0.5rem 1rem;
   border: 2px solid var(--light-background-color);
@@ -62,5 +54,5 @@ body.dark .resume-btn:hover {
   position: fixed;
   top: 1rem;
   left: 12rem;
-  z-index: 2000;
+  /* z-index: 2000; */
 }

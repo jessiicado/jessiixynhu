@@ -1,39 +1,25 @@
-@import "tailwindcss";
-
 .hero-text {
-  font-family: "Inter", sans-serif;
   font-weight: 700;
+  font-family: "Inter", sans-serif;
   font-style: normal;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  top: 2rem;
-  left: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-text h1 {
-  font-size: 5rem;
+  animation: 2s ease;
 }
 
 .hero-text h2 {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   font-weight: 600;
-  background: linear-gradient(
-    rgb(89, 63, 92) 20%,
-    #797070 30%,
-    #858383 70%,
-    #c0baba 80%
+  /* background: linear-gradient(
+    #fad0c4 20%,
+    #d6aeae 30%,
+    #8a97d3 70%,
+    #9f96cf 80%
   );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: "Pixelify Sans", sans-serif;
   background-size: 500% auto;
-  font-family: "Inter", sans-serif;
-  animation: textShine 4s ease-in-out infinite alternate;
+  animation: textShine 0.5s ease-in-out infinite alternate; */
 }
 
 @keyframes textShine {
@@ -43,17 +29,4 @@
   100% {
     background-position: 100% 50%;
   }
-}
-
-.coverphoto {
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  margin: 0 auto;
-  position: relative;
-  top: 0rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 50;
 }
