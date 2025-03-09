@@ -1,33 +1,85 @@
 @import "tailwindcss";
+@import url("satoshi.css");
 
-:root {
-  /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  line-height: 1.5;
-  font-weight: 400;
-
-  /* Light mode Colors */
-  --light-font-color: #2b2b2b;
-  --light-background-color: #f5f5f5;
-  --light-accent-hover-color: #cbb2d6;
-  /* Dark mode Colors */
-  --dark-font-color: #ffffff;
-  --dark-background-color: #121212;
-
-  color-scheme: light dark;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@theme {
+  --font-black: "Epilogue-Black", sans-serif;
+  --font-display: "Satoshi", sans-serif;
+  --font-pixel: "Pixelify Sans", sans-serif;
 }
+
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("../fonts/Satoshi-Regular.woff2") format("woff2"),
+    url("../fonts/Satoshi-Regular.woff") format("woff"),
+    url("../fonts/Satoshi-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi-Medium";
+  src: url("../fonts/Satoshi-Medium.woff2") format("woff2"),
+    url("../fonts/Satoshi-Medium.woff") format("woff"),
+    url("../fonts/Satoshi-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-MediumItalic";
+  src: url("../fonts/Satoshi-MediumItalic.woff2") format("woff2"),
+    url("../fonts/Satoshi-MediumItalic.woff") format("woff"),
+    url("../fonts/Satoshi-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Bold";
+  src: url("../fonts/Satoshi-Bold.woff2") format("woff2"),
+    url("../fonts/Satoshi-Bold.woff") format("woff"),
+    url("../fonts/Satoshi-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-BoldItalic";
+  src: url("../fonts/Satoshi-BoldItalic.woff2") format("woff2"),
+    url("../fonts/Satoshi-BoldItalic.woff") format("woff"),
+    url("../fonts/Satoshi-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Black";
+  src: url("../fonts/Satoshi-Black.woff2") format("woff2"),
+    url("../fonts/Satoshi-Black.woff") format("woff"),
+    url("../fonts/Satoshi-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-BlackItalic";
+  src: url("../fonts/Satoshi-BlackItalic.woff2") format("woff2"),
+    url("../fonts/Satoshi-BlackItalic.woff") format("woff"),
+    url("../fonts/Satoshi-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: italic;
+}
+
 /* get rid of later */
-form {
+/* form {
   padding: 0;
   display: none;
-}
+} */
 
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 html,
@@ -40,34 +92,5 @@ body {
 }
 
 body {
-  margin: 0;
-  height: 100vh;
-  display: block;
-  place-items: center;
-  background-color: var(--light-background-color);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.hero-section {
-  width: 100vw;
-  height: 200vh;
-  display: flex;
-  padding-top: 0rem;
-  margin: 0;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 5px solid orange;
-  overflow: hidden;
-  z-index: 0;
-}
-
-/* About Section */
-.about-section {
-  margin: 0;
-  min-height: 100vh;
-  background-color: beige;
-  text-align: center;
-  border-bottom: 2px solid #5e24a4;
-  scroll-snap-type: proximity;
+  background-color: rgb(198, 165, 199);
 }
