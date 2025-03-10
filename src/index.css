@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url("satoshi.css");
 
 @theme {
   --font-black: "Epilogue-Black", sans-serif;

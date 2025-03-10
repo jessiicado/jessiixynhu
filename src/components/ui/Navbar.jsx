@@ -10,6 +10,7 @@ function Navbar() {
   );
 
   const isReload = () => {
+    console.log("Logo button clicked.");
     window.location.reload();
   };
 
@@ -33,6 +34,7 @@ function Navbar() {
   }, [isMobile]);
 
   const ResumeRoute = () => {
+    console.log("Logo button clicked.");
     window.open(
       "https://drive.google.com/file/d/1TFGSA4vUx0toEmaZjnIWHsd-pirPS-BS/view?usp=sharing",
       "_blank"
@@ -41,7 +43,7 @@ function Navbar() {
 
   return (
     <section>
-      <nav className="Navigation z-10">
+      <nav className="Navigation z-50">
         {/* Mobile Menu Button */}
         {isMobile && (
           <button
@@ -55,9 +57,15 @@ function Navbar() {
 
         {/* NAV BAR LINKS */}
         <ul
-          className={`nav-links flex flex-row fixed top-[1rem] right-[2rem] gap-20 font-pixel ${
-            isMobile ? (menuOpen ? "open" : "hidden") : ""
-          } ${isDarkMode ? "text-white" : "text-black"} `}
+          className={`nav-links flex fixed z-50 top-[1rem] right-[2rem] gap-20 font-pixel 
+    ${
+      isMobile
+        ? menuOpen
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
+        : ""
+    } 
+    ${isDarkMode ? "text-white" : "text-black"}`}
         >
           <li>
             <a href="#Home">HOME</a>
@@ -74,15 +82,23 @@ function Navbar() {
         </ul>
 
         {/* RESUME BUTTON */}
-        <div className="resumebtn fixed top-[2rem] left-[10rem] border-2 ">
-          <button onClick={ResumeRoute} className="p-10">
+        <div className="resumebtn">
+          <button
+            onClick={ResumeRoute}
+            className={`border-2 px-4 py-2 fixed top-[2rem] left-[5rem] rounded-full text-sm font-semibold 
+              ${
+                isDarkMode
+                  ? "text-white border-white"
+                  : "text-black border-black-300"
+              }`}
+          >
             Resume{" "}
           </button>
         </div>
       </nav>
 
       {/* LOGO CHANGE */}
-      <div className="logos">
+      <div className="logos absolute top-1 left-2 z-50">
         <svg
           width="76"
           height="76"
@@ -108,7 +124,7 @@ function Navbar() {
 
       {/* TOGGLE BUTTON  */}
       <button
-        className="toggle-btn fixed top-[1rem] left-[4rem]"
+        className="toggle-btn absolute top-[1.75rem] left-[11rem] z-50"
         onClick={() => setIsDarkMode(!isDarkMode)}
         style={{ border: "none", cursor: "pointer" }}
       >
