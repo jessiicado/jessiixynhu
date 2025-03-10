@@ -12,6 +12,8 @@
   --font-pixel: "Pixelify Sans", sans-serif;
   --font-kola: "Kola", sans-serif;
   --font-temla: "Telma", cursive;
+  --font-general:'General Sans', sans-serif;
+
 }
 
 /* :root {
@@ -130,6 +132,11 @@ body.dark #logos {
   gap: 2rem;
   font-size: 1.25rem;
   font-family: "Pixelify Sans", sans-serif;
+}
+
+.Profile {
+background-image: url("/src/assets/images/nature.jpeg");
+width: 100vh;
 }
 
 /* .Project-header {

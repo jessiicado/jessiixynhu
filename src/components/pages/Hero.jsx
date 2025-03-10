@@ -30,7 +30,7 @@ function Hero() {
         { scale: 2, duration: 3.2, ease: "power4.inOut" },
         "-=3.1"
       )
-      .to(titles.current, { y: 0, duration: 2, ease: "power4.inOut" }, "-=2.5")
+      .to(titles.current, { y: 40, duration: 2, ease: "power4.inOut" }, "-=2.5")
       .from(scroll.current, { opacity: 0, duration: 1, ease: "out" }, "-=2");
   }, []);
 
@@ -40,8 +40,8 @@ function Hero() {
       className="hero relative flex w-full h-full select-none items-center  justify-center"
       aria-label="hero"
     >
-      <div className="z-10 flex flex-col w-full font-display items-center text-title 2xl:text-[9vw] 2xl:space-y-14 font-bold uppercase text-accent-300">
-        <div className="title 2xl:py-16">
+      <div className="z-10 flex flex-col w-full font-display items-center text-title 2xl:text-[9vw] 2xl:space-y-16 font-bold uppercase text-accent-300">
+        <div className="title 2xl:py-56">
           {/* Learn more about useRef */}
           <h1
             ref={(el) => (titles.current[0] = el)}
@@ -50,7 +50,7 @@ function Hero() {
             JESSICA DO
           </h1>
         </div>
-        <div className="title 2xl:py-16">
+        <div className="title 2xl:py-96">
           <h1
             ref={(el) => (titles.current[1] = el)}
             className="translate-y-96 overflow-visible text-white"

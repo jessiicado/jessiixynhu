@@ -1,4 +1,5 @@
 import React from "react";
+import coverPhoto from "/src/assets/images/coverphoto.jpg";
 
 const About = () => {
   return (
@@ -7,7 +8,9 @@ const About = () => {
         className="about-section flex justify-end items-center h-screen w-full"
         id="About"
       >
-        <div className="container text-right text-xl md:w-1/2 p-6">
+   
+
+        <div className="container text-left text-2xl md:w-1/2 p-10 font-general">
           <h2>
             I’m a passionate Computer Science student with a drive to turn ideas
             into innovative realities. With a keen interest in 3D modeling and
@@ -20,13 +23,13 @@ const About = () => {
             collaborate!
           </h2>
         </div>
-      </section>
-      <div
-        className="Profile flex justify-start items-center h-screen w-full"
+        <div
+        className="Profile flex justify-end items-center h-screen w-full"
         id="Profile"
       >
-        {/* <img src={nature} alt="nature" className="nature" /> */}
+        <img src={coverPhoto} alt="coverphoto" className="coverphoto rounded-full flex justify-center w-1/3 z-25" />
       </div>
+      </section>
     </section>
   );
 };
