@@ -36,29 +36,29 @@ function Hero() {
 
   return (
     <section
-      id="hero"
-      className="hero relative flex w-full h-screen select-none items-center justify-center"
+      id="Home"
+      className="hero relative flex w-full h-full select-none items-center  justify-center"
       aria-label="hero"
     >
-      <div className="z-10 flex flex-col dark:fill-white w-full font-display items-center text-title 2xl:text-[10vw] 2xl:space-y-14 font-bold uppercase text-accent-300">
-        <div className="title 2xl:py-6">
+      <div className="z-10 flex flex-col w-full font-display items-center text-title 2xl:text-[9vw] 2xl:space-y-14 font-bold uppercase text-accent-300">
+        <div className="title 2xl:py-16">
           {/* Learn more about useRef */}
           <h1
             ref={(el) => (titles.current[0] = el)}
-            className="translate-y-96 overflow-visible"
+            className={"translate-y-96 overflow-visible"}
           >
             JESSICA DO
           </h1>
         </div>
-        <div className="title 2xl:py-10">
+        <div className="title 2xl:py-16">
           <h1
             ref={(el) => (titles.current[1] = el)}
-            className="translate-y-96 overflow-visible text-transparent"
+            className="translate-y-96 overflow-visible text-white"
           >
             JESSICA DO
           </h1>
         </div>
-        <div className="title 2xl:py-10">
+        <div className="title 2xl:py-16">
           {/* Learn more about useRef */}
           <h1
             ref={(el) => (titles.current[2] = el)}

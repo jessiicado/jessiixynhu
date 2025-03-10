@@ -1,10 +1,23 @@
 @import "tailwindcss";
+@import "./styles/global.css";
 
+@layer theme {
+  .dark {
+    --color-bgContrast: #66c8b6;
+  }
+}
 @theme {
   --font-black: "Epilogue-Black", sans-serif;
   --font-display: "Satoshi", sans-serif;
   --font-pixel: "Pixelify Sans", sans-serif;
+  --font-kola: "Kola", sans-serif;
+  --font-temla: "Telma", cursive;
 }
+
+/* :root {
+  --light-bg-color: #dde2d6;
+  --dark-bg-color: #1e1e1e;
+} */
 
 @font-face {
   font-family: "Satoshi-Regular";
@@ -72,10 +85,10 @@
 }
 
 /* get rid of later */
-/* form {
+form {
   padding: 0;
   display: none;
-} */
+}
 
 * {
   margin: 0;
@@ -85,11 +98,46 @@ html,
 body {
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
-  min-width: 320px;
-  height: 100vh; /* Ensure the body and html fill the viewport */
+  min-height: 320px;
 }
 
 body {
-  background-color: rgb(198, 165, 199);
+  background-color: #dde2d6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+body.dark {
+  background-color: #1e1e1e;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark svg {
+  fill: white;
+}
+body.dark #logos {
+  fill: white;
+}
+
+.entire-navbar {
+  z-index: 1000;
+}
+
+.nav-links {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  gap: 2rem;
+  font-size: 1.25rem;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+/* .Project-header {
+  font-family: "Telma", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17vw;
+  color: transparent;
+  -webkit-text-stroke: 5px black;
+} */

@@ -1,15 +1,13 @@
 import React from "react";
-import "./About.css";
-import background from "../assets/background.jpg";
+
 const About = () => {
   return (
-    <section
-      className="about-section mx-auto p-8"
-      style={{ backgroundImage: background }}
-      id="About"
-    >
-      <div className="flex flex-col md:flex-row justify-between">
-        <div className="container relative top-50 left-10 leading-loose text-left text-xl about-left w-full md:w-1/2 p-6">
+    <section className="about">
+      <section
+        className="about-section flex justify-end items-center h-screen w-full"
+        id="About"
+      >
+        <div className="container text-right text-xl md:w-1/2 p-6">
           <h2>
             I’m a passionate Computer Science student with a drive to turn ideas
             into innovative realities. With a keen interest in 3D modeling and
@@ -22,15 +20,12 @@ const About = () => {
             collaborate!
           </h2>
         </div>
-
-        <div className="about-right top-50 md:w-1/2 p-5 relative">
-          {/* Insert Timeline  */}
-          <div className="ml-2 mb-10">
-            <div className="timeline-item1 bg-blue-100 rounded-lg p-1 shadow-md">
-              2023 - Foster High School Diploma
-            </div>
-          </div>
-        </div>
+      </section>
+      <div
+        className="Profile flex justify-start items-center h-screen w-full"
+        id="Profile"
+      >
+        {/* <img src={nature} alt="nature" className="nature" /> */}
       </div>
     </section>
   );
