@@ -38,8 +38,12 @@ function Navbar() {
         </div>
 
         {/* RESUME BUTTON */}
-        <div className="resumebtn absolute top-[2rem] left-[6rem] border-2 px-4 py-2 rounded-full">
-          <button onClick={ResumeRoute} className="resume-btn">
+        <div className="resumebtn absolute top-[2rem] left-[6rem] border-2 px-4 py-2 font-bold rounded-full">
+          <button
+            onClick={ResumeRoute}
+            style={{ cursor: "pointer" }}
+            className="resume-btn"
+          >
             Resume{" "}
           </button>
         </div>

@@ -7,19 +7,28 @@
   }
 }
 @theme {
-  --font-black: "Epilogue-Black", sans-serif;
+  --font-black: "Epilogue", sans-serif;
   --font-display: "Satoshi", sans-serif;
   --font-pixel: "Pixelify Sans", sans-serif;
   --font-kola: "Kola", sans-serif;
-  --font-temla: "Telma", cursive;
+  --font-telma: "Telma", cursive;
   --font-general: "General Sans", sans-serif;
-}
+  --font-aktura: "Aktura" serif;
 
-/* :root {
+  --font-bonny: "Bonny", serif;
+  --font-tabular: "Tabular", sans-serif;
+
   --light-bg-color: #dde2d6;
   --dark-bg-color: #1e1e1e;
-} */
+  --light-accent-color: #2c2929;
+}
 
+:root {
+  --light-bg-color: #dde2d6;
+  --dark-bg-color: #1e1e1e;
+}
+
+/* FONT FACES */
 @font-face {
   font-family: "Satoshi-Regular";
   src: url("../fonts/Satoshi-Regular.woff2") format("woff2"),
@@ -95,6 +104,7 @@ form {
   margin: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   padding: 0;
@@ -113,6 +123,9 @@ body.dark {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* DARKTOGGLE */
+
+/* NAV */
 body.dark svg {
   fill: white;
 }
@@ -133,29 +146,67 @@ body.dark #logos {
   font-family: "Pixelify Sans", sans-serif;
 }
 
+/* HERO */
+.hero {
+  font-family: "Epilogue", sans-serif;
+}
+
+/* ABOUT */
+
 .Profile {
   background-image: url("/src/assets/images/nature3.JPG");
   background-size: cover;
   width: 100vh;
   transition: background-image 0.3s ease, color 0.3s ease;
+  z-index: 0;
 }
 
+.About {
+  border-bottom: solid 2px orange;
+}
+
+body.dark .about-section {
+  background-color: #38373d;
+}
 body.dark .Profile {
   background-image: url("/src/assets/images/background.jpg");
   background-size: cover;
   width: 100vh;
 }
 
+/* PROJECTS */
 .Projects {
-  margin: 0;
-  padding: 0;
+  border-bottom: 2px solid rgb(0, 47, 255);
 }
+
 .Project-header {
   font-family: "Telma", cursive;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 17vw;
+  font-size: 15vw;
   color: transparent;
   -webkit-text-stroke: 5px black;
+}
+
+body.dark .Project-header {
+  color: transparent;
+  -webkit-text-stroke: 5px var(--light-bg-color);
+}
+
+/* CONTACT */
+.Contact {
+  background-color: #4d4c47;
+}
+
+body.dark .Contact {
+  background-color: #27272a;
+}
+
+/* FOOTER */
+body.dark .Footer {
+  background-color: #4d4c47;
+}
+body.dark .Footer {
+  background-color: #27272a;
 }

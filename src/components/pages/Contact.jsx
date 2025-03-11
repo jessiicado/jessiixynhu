@@ -6,17 +6,21 @@ const Contact = () => {
       className="Contact w-full h-screen flex items-center justify-center flex-col"
       id="Contact"
     >
-      <div className="info text-center flex flex-col items-center mb-8">
-        <h1 className="text-6xl font-display">LET'S TALK!</h1>
-        <h3 className="flex flex-col text-2xl">
-          Got questions? Or just want to chat about the wonders of tech and
-          life? Hit me up! Whether you're looking to collaborate, share ideas,
-          or just want to say hi, I’d love to hear from you. Let’s connect and
-          make something awesome together!
-        </h3>
+      <div className="info text-center flex flex-col items-center">
+        <div className="justify-center flex items-center">
+          <h1 className="text-7xl font-tabular font-bold">LET'S TALK!</h1>
+        </div>
+        <div className="infodesc flex justify-center p-50">
+          <h3 className="flex flex-col text-3xl font-tabular">
+            Got questions? Or just want to chat about the wonders of tech and
+            life? Hit me up! Whether you're looking to collaborate, share ideas,
+            or just want to say hi, I’d love to hear from you. Let’s connect and
+            make something awesome together!
+          </h3>
+        </div>
       </div>
 
-      <div className="communication-container grid grid-cols-2 gap-8 gap-y-12 w-full max-w-4xl">
+      <div className="communication-container grid grid-cols-2 gap-8 gap-y-12 w-full max-w-4xl font-tabular text-3xl">
         <div className="communication flex flex-col items-start">
           <address>
             <h1 href="mailto:jessicanhu.do@gmail.com">
@@ -50,6 +54,7 @@ const Contact = () => {
             href="https://www.github.com/in/jessiicado"
           >
             <svg
+              clasName="flex justify-start items-left"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"

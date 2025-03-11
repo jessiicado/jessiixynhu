@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+// import darkHero from "/src/assets/images/dark-hero.png";
 import gsap from "gsap";
 
 function Hero() {
@@ -11,7 +12,7 @@ function Hero() {
   useEffect(() => {
     const tl = gsap.timeline({ repeat: -1 });
     tl.from(scrollLine.current, {
-      translateX: 0,
+      translateX: -0,
       duration: 1.5,
       ease: "power4.inOut",
     });
@@ -30,40 +31,32 @@ function Hero() {
         { scale: 2, duration: 3.2, ease: "power4.inOut" },
         "-=3.1"
       )
-      .to(titles.current, { y: 40, duration: 2, ease: "power4.inOut" }, "-=2.5")
+      .to(
+        titles.current,
+        { y: -10, duration: 2, ease: "power4.inOut" },
+        "-=2.5"
+      )
       .from(scroll.current, { opacity: 0, duration: 1, ease: "out" }, "-=2");
   }, []);
 
   return (
     <section
       id="Home"
-      className="hero relative flex w-full h-full select-none items-center  justify-center"
+      className="hero relative flex w-full h-full select-none  items-center justify-center"
       aria-label="hero"
     >
-      <div className="z-10 flex flex-col w-full font-display items-center text-title 2xl:text-[9vw] 2xl:space-y-16 font-bold uppercase text-accent-300">
-        <div className="title 2xl:py-56">
+      <div className="z-10 flex flex-col h-screen w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300">
+        <div className="title 2xl:py-[0rem]">
           {/* Learn more about useRef */}
           <h1
             ref={(el) => (titles.current[0] = el)}
-            className={"translate-y-96 overflow-visible"}
+            className="translate-y-96 overflow-visible"
           >
-            JESSICA DO
+            Jessica Do
           </h1>
         </div>
-        <div className="title 2xl:py-96">
-          <h1
-            ref={(el) => (titles.current[1] = el)}
-            className="translate-y-96 overflow-visible text-white"
-          >
-            JESSICA DO
-          </h1>
-        </div>
-        <div className="title 2xl:py-16">
-          {/* Learn more about useRef */}
-          <h1
-            ref={(el) => (titles.current[2] = el)}
-            className="translate-y-96 "
-          >
+        <div className=" title 2xl:py-[25rem]">
+          <h1 ref={(el) => (titles.current[1] = el)} className="translate-y-96">
             JESSICA DO
           </h1>
         </div>
