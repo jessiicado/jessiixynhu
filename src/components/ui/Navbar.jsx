@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { DarkToggleMode } from "./DarkToggleMode";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -12,8 +12,7 @@
   --font-pixel: "Pixelify Sans", sans-serif;
   --font-kola: "Kola", sans-serif;
   --font-temla: "Telma", cursive;
-  --font-general:'General Sans', sans-serif;
-
+  --font-general: "General Sans", sans-serif;
 }
 
 /* :root {
@@ -135,11 +134,23 @@ body.dark #logos {
 }
 
 .Profile {
-background-image: url("/src/assets/images/nature.jpeg");
-width: 100vh;
+  background-image: url("/src/assets/images/nature3.JPG");
+  background-size: cover;
+  width: 100vh;
+  transition: background-image 0.3s ease, color 0.3s ease;
 }
 
-/* .Project-header {
+body.dark .Profile {
+  background-image: url("/src/assets/images/background.jpg");
+  background-size: cover;
+  width: 100vh;
+}
+
+.Projects {
+  margin: 0;
+  padding: 0;
+}
+.Project-header {
   font-family: "Telma", cursive;
   display: flex;
   justify-content: center;
@@ -147,4 +158,4 @@ width: 100vh;
   font-size: 17vw;
   color: transparent;
   -webkit-text-stroke: 5px black;
-} */
+}

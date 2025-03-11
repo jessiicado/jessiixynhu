@@ -8,8 +8,6 @@ const About = () => {
         className="about-section flex justify-end items-center h-screen w-full"
         id="About"
       >
-   
-
         <div className="container text-left text-2xl md:w-1/2 p-10 font-general">
           <h2>
             I’m a passionate Computer Science student with a drive to turn ideas
@@ -24,11 +22,15 @@ const About = () => {
           </h2>
         </div>
         <div
-        className="Profile flex justify-end items-center h-screen w-full"
-        id="Profile"
-      >
-        <img src={coverPhoto} alt="coverphoto" className="coverphoto rounded-full flex justify-center w-1/3 z-25" />
-      </div>
+          className="Profile flex justify-end items-center h-screen w-full"
+          id="Profile"
+        >
+          <img
+            src={coverPhoto}
+            alt="coverphoto"
+            className="coverphoto rounded-full w-1/4 right-[10rem] absolute z-25"
+          />
+        </div>
       </section>
     </section>
   );
