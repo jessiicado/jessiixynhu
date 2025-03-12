@@ -1,11 +1,34 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import coverPhoto from "/src/assets/images/coverphoto.jpg";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { motion, useScroll, useTransform } from "framer-motion"; // Fixed incorrect import from "motion/react"
 
 gsap.registerPlugin(ScrollTrigger);
 
+function useParallax(value, distance) {
+  return useTransform(value, [0, 1], [-distance, distance]);
+}
+
+function Image({ id }) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+  const y = useParallax(scrollYProgress, 300);
+
+  return (
+    <motion.img
+      ref={ref}
+      src={coverPhoto}
+      alt="coverphoto"
+      className="coverphoto rounded-full w-1/4 right-[10rem] absolute z-25"
+      style={{ y }}
+    />
+  );
+}
+
 const About = () => {
+  const ref = useRef(null); // Define ref here for the <img> element
+
   useEffect(() => {
     gsap.fromTo(
       ".ABOUT-TITLE",
@@ -19,11 +42,12 @@ const About = () => {
           trigger: "#About",
           start: "top 80%", // Trigger when the section is about to enter viewport
           end: "top 50%", // Fully revealed when the section is 50% in view
-          oncec: true,
+          once: true, // Fixed typo here
         },
       }
     );
   }, []);
+
   return (
     <section className="About">
       <section
@@ -34,9 +58,6 @@ const About = () => {
           <div className="ABOUT-TITLE w-1/2 justify-center items-center whitespace-nowrap font-telma">
             <h1 className="flex text-9xl">ABOUT</h1>
           </div>
-          {/* <div className=" w-1/7 pt-10 whitespace-nowrap font-general">
-            <h1 className="flex text-xl border-b-1">JESSICA DO</h1>
-          </div> */}
           <h2 className="pt-20 font-tabular">
             I’m a passionate Computer Science student with a drive to turn ideas
             into innovative realities. With a keen interest in 3D modeling and
@@ -53,11 +74,7 @@ const About = () => {
           className="Profile flex justify-end items-center h-screen w-full"
           id="Profile"
         >
-          <img
-            src={coverPhoto}
-            alt="coverphoto"
-            className="coverphoto rounded-full w-1/4 right-[10rem] absolute z-25"
-          />
+          <Image id={1} />
         </div>
       </section>
     </section>

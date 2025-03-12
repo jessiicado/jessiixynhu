@@ -161,9 +161,9 @@ body.dark #logos {
   z-index: 0;
 }
 
-.About {
+/* .About {
   border-bottom: solid 2px orange;
-}
+} */
 
 body.dark .about-section {
   background-color: #38373d;
@@ -175,9 +175,9 @@ body.dark .Profile {
 }
 
 /* PROJECTS */
-.Projects {
+/* .Projects {
   border-bottom: 2px solid rgb(0, 47, 255);
-}
+} */
 
 .Project-header {
   font-family: "Telma", cursive;
