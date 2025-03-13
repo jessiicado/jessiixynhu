@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import Clock from "/src/components/ui/Clock.jsx";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,6 +31,9 @@ function Navbar() {
 
   return (
     <section className="entire-navbar fixed z-50">
+      <div className="bg-transparent color-black">
+        <Clock />
+      </div>
       {/* LEFT NAVBAR */}
       <div className="left-navbar">
         {/* LOGO CHANGE */}

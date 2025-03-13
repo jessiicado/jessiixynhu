@@ -21,7 +21,7 @@ const Contact = () => {
       </div>
 
       <div className="communication-container grid grid-cols-2 gap-8 gap-y-12 w-full max-w-4xl font-tabular text-3xl">
-        <div className="communication flex flex-col items-start">
+        <div className="communication flex flex-col items-start z-50">
           <address>
             <h1 href="mailto:jessicanhu.do@gmail.com">
               jessicanhu.do@gmail.com
@@ -51,7 +51,7 @@ const Contact = () => {
           <a
             className="github-icon flex flex-row items-center gap-x-2 text-xl"
             target="_blank"
-            href="https://www.github.com/in/jessiicado"
+            href="https://www.github.com/jessiicado"
           >
             <svg
               clasName="flex justify-start items-left"

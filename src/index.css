@@ -14,7 +14,7 @@
   --font-telma: "Telma", cursive;
   --font-general: "General Sans", sans-serif;
   --font-aktura: "Aktura" serif;
-
+  --font-new: "New Title", serif;
   --font-bonny: "Bonny", serif;
   --font-tabular: "Tabular", sans-serif;
 
@@ -105,6 +105,9 @@ form {
   box-sizing: border-box;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
 html,
 body {
   padding: 0;
@@ -149,6 +152,8 @@ body.dark #logos {
 /* HERO */
 .hero {
   font-family: "Epilogue", sans-serif;
+  scroll-snap-align: start;
+  overflow: hidden;
 }
 
 /* ABOUT */
@@ -159,11 +164,12 @@ body.dark #logos {
   width: 100vh;
   transition: background-image 0.3s ease, color 0.3s ease;
   z-index: 0;
+  overflow: hidden;
 }
 
-/* .About {
-  border-bottom: solid 2px orange;
-} */
+.About {
+  scroll-snap-align: start;
+}
 
 body.dark .about-section {
   background-color: #38373d;
@@ -175,9 +181,10 @@ body.dark .Profile {
 }
 
 /* PROJECTS */
-/* .Projects {
-  border-bottom: 2px solid rgb(0, 47, 255);
-} */
+.Projects {
+  scroll-snap-align: start;
+  overflow: hidden;
+}
 
 .Project-header {
   font-family: "Telma", cursive;
@@ -196,7 +203,7 @@ body.dark .Project-header {
 
 /* CONTACT */
 .Contact {
-  background-color: #4d4c47;
+  scroll-snap-align: start;
 }
 
 body.dark .Contact {

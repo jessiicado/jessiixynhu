@@ -6,10 +6,12 @@ import { motion, useScroll, useTransform } from "framer-motion"; // Fixed incorr
 
 gsap.registerPlugin(ScrollTrigger);
 
+//parallax function to return transformation
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
+//utilizes scroll to apply parallax function
 function Image({ id }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
@@ -29,6 +31,7 @@ function Image({ id }) {
 const About = () => {
   const ref = useRef(null); // Define ref here for the <img> element
 
+  //uses gsap scrolltrigger to bring about-title to page
   useEffect(() => {
     gsap.fromTo(
       ".ABOUT-TITLE",
@@ -51,7 +54,7 @@ const About = () => {
   return (
     <section className="About">
       <section
-        className="about-section flex justify-end items-center bg-white h-screen w-full"
+        className="about-section flex justify-end items-center h-screen w-full"
         id="About"
       >
         <div className="container text-left text-2xl md:w-1/2 p-20 font-general">
