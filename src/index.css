@@ -116,21 +116,9 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body.dark {
-  background-color: var(--dark-bg-color);
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 /* DARKTOGGLE */
 
 /* NAV */
-body.dark svg {
-  fill: white;
-}
-body.dark #logos {
-  fill: white;
-}
 
 .entire-navbar {
   z-index: 1000;
@@ -140,8 +128,8 @@ body.dark #logos {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  gap: 2rem;
-  font-size: 1.25rem;
+  gap: 1rem;
+  font-size: 1rem;
   font-family: "Pixelify Sans", sans-serif;
 }
 
@@ -196,24 +184,22 @@ body.dark .Profile {
   -webkit-text-stroke: 5px black;
 }
 
-body.dark .Project-header {
-  color: transparent;
-  -webkit-text-stroke: 5px var(--light-bg-color);
-}
-
 /* CONTACT */
 /* .Contact {
   scroll-snap-align: end;
 } */
 
-body.dark .Contact {
+.even .Contact {
   background-color: #27272a;
 }
 
 /* FOOTER */
-body.dark .Footer {
-  background-color: #4d4c47;
+
+.Footer {
+  background-color: var(--light-bg-color);
 }
-body.dark .Footer {
-  background-color: #27272a;
+
+.even {
+  background-color: var(--dark-bg-color);
+  color: var(--light-bg-color);
 }

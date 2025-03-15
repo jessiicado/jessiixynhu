@@ -43,7 +43,7 @@ function Hero() {
   return (
     <section
       id="Home"
-      className="hero relative flex w-full h-full select-none  items-center justify-center"
+      className="hero relative flex w-full h-full select-none z-0 items-center justify-center"
       aria-label="hero"
     >
       <div className=" flex flex-col h-screen w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300">
@@ -61,7 +61,7 @@ function Hero() {
             JESSICA DO
           </h1>
         </div>
-        <div className="bg-transparent color-black">
+        <div className="bg-transparent z-0 color-black">
           <Clock />
         </div>
       </div>

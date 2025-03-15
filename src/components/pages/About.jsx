@@ -3,7 +3,6 @@ import coverPhoto from "/src/assets/images/coverphoto.jpg";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { motion, useScroll, useTransform } from "framer-motion"; // Fixed incorrect import from "motion/react"
-
 gsap.registerPlugin(ScrollTrigger);
 
 //parallax function to return transformation
@@ -52,7 +51,7 @@ const About = () => {
   }, []);
 
   return (
-    <section className="About">
+    <section className="About even:bg-gray-200 transition">
       <section
         className="about-section flex justify-end z-0 sticky items-center h-screen w-full"
         id="About"
