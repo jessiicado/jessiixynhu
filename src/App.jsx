@@ -10,7 +10,7 @@ import Footer from "./components/pages/Footer";
 function App() {
   return (
     <>
-      <DarkToggleMode />
+      {/* <DarkToggleMode /> */}
       <Navbar />
       <Hero />
       <About />

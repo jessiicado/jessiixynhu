@@ -1,16 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import Clock from "/src/components/ui/Clock.jsx";
+import Logo from "/src/assets/images/logo-icon.svg";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  const isReload = () => {
-    console.log("Logo button clicked.");
-    window.location.reload();
-  };
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -22,7 +17,6 @@ function Navbar() {
   }, [isMobile]);
 
   const ResumeRoute = () => {
-    console.log("Logo button clicked.");
     window.open(
       "https://drive.google.com/file/d/1TFGSA4vUx0toEmaZjnIWHsd-pirPS-BS/view?usp=sharing",
       "_blank"
@@ -31,18 +25,10 @@ function Navbar() {
 
   return (
     <section className="entire-navbar fixed z-50">
-      <div className="bg-transparent color-black">
-        <Clock />
-      </div>
       {/* LEFT NAVBAR */}
-      <div className="left-navbar">
-        {/* LOGO CHANGE */}
-        <div id="logos" className="logos" onClick={isReload}>
-          {/* <img src={Vector} alt="Vector" /> */}
-        </div>
-
+      <div className="left-navbar ">
         {/* RESUME BUTTON */}
-        <div className="resumebtn absolute top-[2rem] left-[6rem] border-2 px-4 py-2 font-bold rounded-full">
+        <div className="resumebtn absolute top-[2rem] left-[6rem] bg-[#1e1e1e] px-4 py-2 font-normal font-pixel text-white rounded-full">
           <button
             onClick={ResumeRoute}
             style={{ cursor: "pointer" }}

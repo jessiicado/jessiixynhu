@@ -1,11 +1,6 @@
 @import "tailwindcss";
 @import "./styles/global.css";
 
-@layer theme {
-  .dark {
-    --color-bgContrast: #66c8b6;
-  }
-}
 @theme {
   --font-black: "Epilogue", sans-serif;
   --font-display: "Satoshi", sans-serif;
@@ -24,7 +19,7 @@
 }
 
 :root {
-  --light-bg-color: #dde2d6;
+  --light-bg-color: #eaece5;
   --dark-bg-color: #1e1e1e;
 }
 
@@ -106,7 +101,8 @@ form {
 }
 
 html {
-  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-type: proximity;
 }
 html,
 body {
@@ -116,12 +112,12 @@ body {
 }
 
 body {
-  background-color: #dde2d6;
+  background-color: var(--light-bg-color);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.dark {
-  background-color: #1e1e1e;
+  background-color: var(--dark-bg-color);
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -152,7 +148,7 @@ body.dark #logos {
 /* HERO */
 .hero {
   font-family: "Epilogue", sans-serif;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
   overflow: hidden;
 }
 
@@ -167,13 +163,17 @@ body.dark #logos {
   overflow: hidden;
 }
 
-.About {
+/* .About {
   scroll-snap-align: start;
+} */
+
+.About .nav-links {
+  color: white;
 }
 
-body.dark .about-section {
+/* body.dark .about-section {
   background-color: #38373d;
-}
+} */
 body.dark .Profile {
   background-image: url("/src/assets/images/background.jpg");
   background-size: cover;
@@ -182,7 +182,7 @@ body.dark .Profile {
 
 /* PROJECTS */
 .Projects {
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
   overflow: hidden;
 }
 
@@ -202,9 +202,9 @@ body.dark .Project-header {
 }
 
 /* CONTACT */
-.Contact {
-  scroll-snap-align: start;
-}
+/* .Contact {
+  scroll-snap-align: end;
+} */
 
 body.dark .Contact {
   background-color: #27272a;

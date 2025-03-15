@@ -15,14 +15,14 @@ function useParallax(value, distance) {
 function Image({ id }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 300);
+  const y = useParallax(scrollYProgress, 200);
 
   return (
     <motion.img
       ref={ref}
       src={coverPhoto}
       alt="coverphoto"
-      className="coverphoto rounded-full w-1/4 right-[10rem] absolute z-25"
+      className="coverphoto rounded-full w-1/4 right-[10rem] absolute z-"
       style={{ y }}
     />
   );
@@ -35,7 +35,7 @@ const About = () => {
   useEffect(() => {
     gsap.fromTo(
       ".ABOUT-TITLE",
-      { opacity: 0, y: -150 }, // Start hidden and moved down
+      { opacity: 0, y: -100 }, // Start hidden and moved down
       {
         opacity: 1,
         y: 0,
@@ -54,11 +54,11 @@ const About = () => {
   return (
     <section className="About">
       <section
-        className="about-section flex justify-end items-center h-screen w-full"
+        className="about-section flex justify-end z-0 sticky items-center h-screen w-full"
         id="About"
       >
         <div className="container text-left text-2xl md:w-1/2 p-20 font-general">
-          <div className="ABOUT-TITLE w-1/2 justify-center items-center whitespace-nowrap font-telma">
+          <div className="ABOUT-TITLE w-1/2 justify-center items-center whitespace-nowrap font-pixel">
             <h1 className="flex text-9xl">ABOUT</h1>
           </div>
           <h2 className="pt-20 font-tabular">

@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
-// import darkHero from "/src/assets/images/dark-hero.png";
+import darkHero from "/src/assets/images/dark-hero.jpg";
+import Clock from "../ui/Clock";
 import gsap from "gsap";
 
 function Hero() {
@@ -45,14 +46,14 @@ function Hero() {
       className="hero relative flex w-full h-full select-none  items-center justify-center"
       aria-label="hero"
     >
-      <div className="z-10 flex flex-col h-screen w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300">
+      <div className=" flex flex-col h-screen w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300">
         <div className="title 2xl:py-[0rem]">
           {/* Learn more about useRef */}
           <h1
             ref={(el) => (titles.current[0] = el)}
             className="translate-y-96 overflow-visible"
           >
-            Jessica Do
+            JESSICA DO
           </h1>
         </div>
         <div className=" title 2xl:py-[25rem]">
@@ -60,7 +61,21 @@ function Hero() {
             JESSICA DO
           </h1>
         </div>
+        <div className="bg-transparent color-black">
+          <Clock />
+        </div>
       </div>
+      {/* <div
+        ref={imgContainer}
+        className="absolute mx-auto  w-[55%] overflow-hidden rounded-md"
+      >
+        <img
+          ref={img}
+          className=" scale-110 aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-full h-auto"
+          src={heroImg}
+          alt="Abstract cubic background image."
+        />
+      </div> */}
     </section>
   );
 }
