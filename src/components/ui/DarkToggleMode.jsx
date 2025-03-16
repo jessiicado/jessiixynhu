@@ -7,11 +7,11 @@ export const DarkToggleMode = () => {
 
   useEffect(() => {
     if (darkMode) {
-      document.body.classList.add("dark"); // Use body instead of html
-      localStorage.setItem("theme", "dark");
+      document.body.classList.add("even"); // Use body instead of html
+      localStorage.setItem("theme", "even");
     } else {
-      document.body.classList.remove("dark");
-      localStorage.setItem("theme", "light");
+      document.body.classList.remove("even");
+      localStorage.setItem("theme", "odd");
     }
   }, [darkMode]);
 

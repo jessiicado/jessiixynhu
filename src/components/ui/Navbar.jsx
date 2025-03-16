@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { motion, useInView } from "framer-motion";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -70,7 +69,7 @@ function Navbar() {
         </nav>
       </div>
 
-      <div className="logos absolute top-1 left-4">
+      <div className="logos absolute top-1 left-4" id="Logos">
         <svg
           width="76"
           height="93"

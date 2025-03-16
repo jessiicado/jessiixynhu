@@ -1,6 +1,54 @@
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Contact = () => {
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: "#Contact",
+      start: "top 60%",
+      end: "bottom 60%",
+      onEnter: () => {
+        gsap.to("body", {
+          backgroundColor: "#eaece5",
+          color: "#000000",
+          duration: 0.2,
+          ease: "power1.inOut",
+        });
+        gsap.to("#logos", {
+          fill: "#000000",
+          duration: 0.2,
+          ease: "power1.inOut",
+        });
+        gsap.to(".resumebtn", {
+          backgroundColor: "#1e1e1e",
+          color: "#ffffff",
+          duration: 0.2,
+          ease: "power1.inOut",
+        });
+      },
+      onLeaveBack: () => {
+        gsap.to("body", {
+          backgroundColor: "#1e1e1e",
+          color: "#ffffff",
+          duration: 0.2,
+          ease: "power1.inOut",
+        });
+        gsap.to("#logos", {
+          fill: "#ffffff",
+          duration: 0.2,
+          ease: "power1.inOut",
+        });
+        gsap.to(".resumebtn", {
+          backgroundColor: "#ffffff",
+          color: "#000000",
+          duration: 0.2,
+          ease: "power1.inOut",
+        });
+      },
+    });
+  }, []);
+
   return (
     <section
       className="Contact w-full h-screen flex items-center justify-center flex-col"

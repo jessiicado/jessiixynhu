@@ -13,8 +13,8 @@
   --font-bonny: "Bonny", serif;
   --font-tabular: "Tabular", sans-serif;
 
-  --light-bg-color: #dde2d6;
-  --dark-bg-color: #1e1e1e;
+  --lightcolor: #dde2d6;
+  --darkcolor: #1e1e1e;
   --light-accent-color: #2c2929;
 }
 
@@ -102,13 +102,14 @@ form {
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: proximity;
+  scroll-snap-type: y proximity;
 }
 html,
 body {
   padding: 0;
   margin: 0;
   min-height: 320px;
+  overflow-y: auto;
 }
 
 body {
@@ -151,9 +152,9 @@ body {
   overflow: hidden;
 }
 
-/* .About {
+.About {
   scroll-snap-align: start;
-} */
+}
 
 .About .nav-links {
   color: white;
@@ -181,7 +182,7 @@ body.dark .Profile {
   align-items: center;
   font-size: 15vw;
   color: transparent;
-  -webkit-text-stroke: 5px black;
+  -webkit-text-stroke: 5px var(--light-bg-color);
 }
 
 /* CONTACT */
@@ -197,9 +198,4 @@ body.dark .Profile {
 
 .Footer {
   background-color: var(--light-bg-color);
-}
-
-.even {
-  background-color: var(--dark-bg-color);
-  color: var(--light-bg-color);
 }
