@@ -131,7 +131,25 @@ body {
   right: 1rem;
   gap: 1rem;
   font-size: 1rem;
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: "Epilogue", sans-serif;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* Start with zero width */
+  height: 3px;
+  background: rgb(100, 90, 92);
+  transform: scaleX(0);
+  transform-origin: bottom left; /* Set the transform origin for the left side */
+  transition: width 0.3s ease-in-out; /* Transition width */
+}
+
+.nav-links a:hover::before {
+  width: 100%; /* Expand the width on hover */
 }
 
 /* HERO */
@@ -160,9 +178,6 @@ body {
   color: white;
 }
 
-/* body.dark .about-section {
-  background-color: #38373d;
-} */
 body.dark .Profile {
   background-image: url("/src/assets/images/background.jpg");
   background-size: cover;
@@ -190,12 +205,14 @@ body.dark .Profile {
   scroll-snap-align: end;
 } */
 
-.even .Contact {
-  background-color: #27272a;
-}
-
 /* FOOTER */
 
 .Footer {
   background-color: var(--light-bg-color);
+}
+
+#About,
+#Projects,
+#Contact {
+  scroll-snap-align: start;
 }

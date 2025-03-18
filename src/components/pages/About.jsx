@@ -95,10 +95,10 @@ const About = () => {
       className="about-section flex justify-end sticky items-center h-screen w-full"
     >
       <div className="container text-left text-2xl z-0 md:w-1/2 p-20 font-general">
-        <div className="ABOUT-TITLE w-1/2 justify-center items-center whitespace-nowrap font-pixel">
+        <div className="ABOUT-TITLE w-1/2 justify-center items-center whitespace-nowrap font-black">
           <h1 className="flex text-9xl">ABOUT</h1>
         </div>
-        <h2 className="pt-20 font-tabular">
+        <h2 className="pt-20 font-black">
           I’m a passionate Computer Science student with a drive to turn ideas
           into innovative realities. With a keen interest in 3D modeling and
           software development, I’m always eager to dive deeper into data

@@ -7,7 +7,6 @@ function Hero() {
   const img = useRef(null);
   const imgContainer = useRef(null);
   const titles = useRef([]);
-  const clockRef = useRef(null);
   const transitionImage = useRef(null);
 
   useEffect(() => {
@@ -43,11 +42,6 @@ function Hero() {
       .from(
         titles.current[1],
         { y: 100, opacity: 0, duration: 1.5, ease: "power4.inOut" },
-        "-=1"
-      )
-      .from(
-        clockRef.current,
-        { opacity: 0, y: 20, duration: 1.5, ease: "power4.inOut" },
         "-=1"
       );
   }, []);
@@ -85,7 +79,7 @@ function Hero() {
           </h1>
         </div>
         {/* Clock Component */}
-        <div ref={clockRef} className="bg-transparent z-0">
+        <div className="bg-transparent z-0">
           <Clock />
         </div>
       </div>

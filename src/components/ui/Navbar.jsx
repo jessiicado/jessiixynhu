@@ -24,29 +24,6 @@ function Navbar() {
     );
   };
 
-  // useEffect(() => {
-
-  //   ScrollTrigger.create({
-  //     trigger: ["#About", "#Contact"],
-  //     start: "top 60%",
-  //     end: "bottom 60%",
-  //     onEnter: () => {
-  //       gsap.to("#Logos", {
-  //         fill: "#ffffff",
-  //         duration: 0.2,
-  //         ease: "power1.inOut",
-  //       });
-  //     },
-  //     onLeaveBack: () => {
-  //       gsap.to("#Logos", {
-  //         fill: "#000000",
-  //         duration: 0.2,
-  //         ease: "power1.inOut",
-  //       });
-  //     },
-  //   });
-  // }, []);
-
   return (
     <section className="entire-navbar fixed z-50">
       <div className="right-navbar">
@@ -79,7 +56,7 @@ function Navbar() {
             <li>
               <div className="left-navbar ">
                 {/* RESUME BUTTON */}
-                <div className="resumebtn bg-[#1e1e1e] px-4 py-2 font-normal font-pixel text-white rounded-full">
+                <div className="resumebtn bg-[#1e1e1e] px-4 py-2 font-normal font-black text-white rounded-full">
                   <button
                     onClick={ResumeRoute}
                     style={{ cursor: "pointer" }}

@@ -5,7 +5,7 @@ import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 import Projects from "./components/pages/Projects";
 import Footer from "./components/pages/Footer";
-
+import ToTop from "./components/ui/ToTop";
 function App() {
   return (
     <>
@@ -16,6 +16,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <ToTop />
     </>
   );
 }
