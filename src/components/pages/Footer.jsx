@@ -1,4 +1,5 @@
 import React from "react";
+import ToTop from "../ui/ToTop";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,6 +9,9 @@ const Footer = () => {
       <p className="font-tabular font-bold text-xl">
         © {currentYear} Jessica Do. All rights reserved.
       </p>
+      <div className="justify-end flex">
+        <ToTop />
+      </div>
     </footer>
   );
 };

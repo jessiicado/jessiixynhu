@@ -7,21 +7,13 @@ function Hero() {
   const img = useRef(null);
   const imgContainer = useRef(null);
   const titles = useRef([]);
-  const scrollLine = useRef(null);
-  const scroll = useRef(null);
+  const clockRef = useRef(null);
+  const transitionImage = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ repeat: -1 });
-    tl.from(scrollLine.current, {
-      translateX: -0,
-      duration: 1.5,
-      ease: "power4.inOut",
-    });
-  }, []);
+    const tl = gsap.timeline({ repeat: -1, yoyo: true });
 
-  useEffect(() => {
-    const tl = gsap.timeline();
-
+    // Initial image & title animations
     tl.from(imgContainer.current, {
       scale: 1.3,
       duration: 3.25,
@@ -33,11 +25,31 @@ function Hero() {
         "-=3.1"
       )
       .to(
-        titles.current,
-        { y: -10, duration: 2, ease: "power4.inOut" },
-        "-=2.5"
+        titles.current[0],
+        { y: -100, opacity: 0, duration: 1.5, ease: "power4.inOut" },
+        "-=1"
       )
-      .from(scroll.current, { opacity: 0, duration: 1, ease: "out" }, "-=2");
+      .to(
+        transitionImage.current,
+        { opacity: 1, scale: 1.1, duration: 1.5, ease: "power2.inOut" },
+        "-=1"
+      )
+      .to(transitionImage.current, {
+        opacity: 0,
+        scale: 1.2,
+        duration: 1.5,
+        ease: "power2.inOut",
+      })
+      .from(
+        titles.current[1],
+        { y: 100, opacity: 0, duration: 1.5, ease: "power4.inOut" },
+        "-=1"
+      )
+      .from(
+        clockRef.current,
+        { opacity: 0, y: 20, duration: 1.5, ease: "power4.inOut" },
+        "-=1"
+      );
   }, []);
 
   return (
@@ -56,26 +68,27 @@ function Hero() {
             JESSICA DO
           </h1>
         </div>
+        <div
+          ref={transitionImage}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0"
+        >
+          <img
+            src={darkHero}
+            alt="Transition"
+            className="w-[400px] h-auto object-cover"
+          />
+        </div>
+
         <div className=" title 2xl:py-[25rem]">
           <h1 ref={(el) => (titles.current[1] = el)} className="translate-y-96">
             JESSICA DO
           </h1>
         </div>
-        <div className="bg-transparent z-0 color-black">
+        {/* Clock Component */}
+        <div ref={clockRef} className="bg-transparent z-0">
           <Clock />
         </div>
       </div>
-      {/* <div
-        ref={imgContainer}
-        className="absolute mx-auto  w-[55%] overflow-hidden rounded-md"
-      >
-        <img
-          ref={img}
-          className=" scale-110 aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-full h-auto"
-          src={heroImg}
-          alt="Abstract cubic background image."
-        />
-      </div> */}
     </section>
   );
 }

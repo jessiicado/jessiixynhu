@@ -55,12 +55,11 @@ const About = () => {
           duration: 0.2,
           ease: "power1.inOut",
         });
-
-        gsap.to("#logos", {
+        gsap.to("#Logos", {
           fill: "#ffffff",
           duration: 0.2,
           ease: "power1.inOut",
-        }); // Change logo color to white
+        });
         gsap.to(".resumebtn", {
           backgroundColor: "#ffffff",
           color: "#000000",
@@ -75,11 +74,11 @@ const About = () => {
           duration: 0.2,
           ease: "power1.inOut",
         });
-        gsap.to("#logos", {
+        gsap.to("#Logos", {
           fill: "#000000",
           duration: 0.2,
           ease: "power1.inOut",
-        }); // Change logo color back to black
+        });
         gsap.to(".resumebtn", {
           backgroundColor: "#1e1e1e",
           color: "#ffffff",

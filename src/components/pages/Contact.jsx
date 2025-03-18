@@ -15,7 +15,7 @@ const Contact = () => {
           duration: 0.2,
           ease: "power1.inOut",
         });
-        gsap.to("#logos", {
+        gsap.to("#Logos", {
           fill: "#000000",
           duration: 0.2,
           ease: "power1.inOut",
@@ -34,7 +34,7 @@ const Contact = () => {
           duration: 0.2,
           ease: "power1.inOut",
         });
-        gsap.to("#logos", {
+        gsap.to("#Logos", {
           fill: "#ffffff",
           duration: 0.2,
           ease: "power1.inOut",
