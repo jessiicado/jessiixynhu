@@ -36,7 +36,7 @@ const Projects = () => {
             <div className="portfolio absolute w-[700px] h-[700px] top-0 left-[10rem]">
               <div className="card1 absolute w-[700px] h-[700px] top-[2rem] left-0 bg-[url(src/assets/images/portfolio-pic.png)] hover:opacity-50 transition-opacity duration-200" />
               {/* Month/Year display */}
-              <div className="date absolute top-[43rem] left-[1rem] text-4xl font-black font-bold z-25">
+              <div className="date absolute top-[42rem] left-[1rem] text-5xl font-black z-25">
                 <h1 className="text-black">JAN 2025</h1>
               </div>
               <div className="techstack absolute top-[48rem] text-xl">
@@ -68,7 +68,7 @@ const Projects = () => {
           </div>
 
           <div className="Project-2" id="proj2"></div>
-          <div className="valentine absolute w-[700px] h-[700px] top-[5rem] right-[10rem]">
+          <div className="valentine absolute w-[700px] h-[700px] top-[10rem] right-[10rem]">
             <div
               className="eachcard absolute w-[700px] h-[700px] top-[2rem] hover:opacity-50 transition-opacity duration-200 left-0 bg-[url(src/assets/images/valentine-pic.png)]"
               onClick={valentineLink}
@@ -76,8 +76,8 @@ const Projects = () => {
             />
             <link href="https://jessiicado.github.io/valentine/"></link>
             {/* Month/Year display */}
-            <div className="date absolute top-[40rem] left-[2rem] text-6xl font-black z-25">
-              <h1 className="text-black">JAN 2024</h1>
+            <div className="date absolute top-[42rem] left-[1rem] text-5xl font-black z-25">
+              <h1 className="text-black">JAN 2025</h1>
             </div>
             <div className="techstack absolute top-[48rem] text-xl">
               <ul className="flex flex-row gap-2">

@@ -2,11 +2,14 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  const isReload = () => {
+    return window.location.reload();
+  };
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -24,6 +27,34 @@ function Navbar() {
     );
   };
 
+  // const LogoEase = useRef([]);
+  // const navBarEase = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.from(
+      [".logos", ".nav-links li"],
+      {
+        opacity: 0,
+        y: -20,
+        duration: 0.8,
+        ease: "power2.out",
+      },
+      "+=0.5" // Starts the navbar animation 0.5s before the logo animation finishes
+    );
+    tl.to(
+      [".logos", ".nav-links li"],
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      },
+      "+=0.5" // Starts the navbar animation 0.5s before the logo animation finishes
+    );
+  }, []);
+
   return (
     <section className="entire-navbar fixed z-50">
       <div className="right-navbar">
@@ -40,7 +71,7 @@ function Navbar() {
           )}
 
           {/* NAV BAR LINKS */}
-          <ul className="nav-links flex items-center justify-end">
+          <ul className="nav-links flex items-center justify-end ">
             <li>
               <a href="#Home">HOME</a>
             </li>
@@ -71,7 +102,11 @@ function Navbar() {
         </nav>
       </div>
 
-      <div className="logos absolute top-4 left-4">
+      <div
+        className="logos absolute top-4 left-4"
+        onClick={isReload}
+        style={{ cursor: "pointer" }}
+      >
         <svg
           width="45"
           height="75"

@@ -109,7 +109,6 @@ body {
   padding: 0;
   margin: 0;
   min-height: 320px;
-  overflow-y: auto;
 }
 
 body {
@@ -155,7 +154,6 @@ body {
 /* HERO */
 .hero {
   font-family: "Epilogue", sans-serif;
-  /* scroll-snap-align: start; */
   overflow: hidden;
 }
 
@@ -163,30 +161,29 @@ body {
 
 .Profile {
   background-image: url("/src/assets/images/nature3.JPG");
-  background-size: cover;
-  width: 100vh;
+  background-size: contain;
+  width: 50%;
+  height: 100%;
   transition: background-image 0.3s ease, color 0.3s ease;
   z-index: 0;
-  overflow: hidden;
 }
 
-.About {
+.About,
+.Hero,
+.Projects,
+.Contact {
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .About .nav-links {
   color: white;
 }
-
-body.dark .Profile {
-  background-image: url("/src/assets/images/background.jpg");
-  background-size: cover;
-  width: 100vh;
+.about-section {
+  border-bottom: solid 2px orange;
 }
-
 /* PROJECTS */
 .Projects {
-  /* scroll-snap-align: start; */
   overflow: hidden;
 }
 
@@ -201,18 +198,9 @@ body.dark .Profile {
 }
 
 /* CONTACT */
-/* .Contact {
-  scroll-snap-align: end;
-} */
 
 /* FOOTER */
 
 .Footer {
   background-color: var(--light-bg-color);
-}
-
-#About,
-#Projects,
-#Contact {
-  scroll-snap-align: start;
 }

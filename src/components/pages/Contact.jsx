@@ -102,7 +102,7 @@ const Contact = () => {
             href="https://www.github.com/jessiicado"
           >
             <svg
-              clasName="flex justify-start items-left"
+              className="flex justify-start items-left"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"

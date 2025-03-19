@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import gsap from "gsap";
 
 const Clock = () => {
   const [time, setTime] = useState(new Date());
@@ -9,6 +10,27 @@ const Clock = () => {
     }, 1000);
 
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.from(".ClockLocation", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      ease: "power2.out",
+    });
+    tl.to(
+      ".ClockLocation",
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+      },
+      "+=1"
+    );
   }, []);
 
   const formatTime = (num) => (num < 10 ? `0${num}` : num);

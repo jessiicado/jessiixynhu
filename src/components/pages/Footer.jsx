@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="Footer p-5 flex justify-start">
       <p className="font-tabular font-bold text-xl">
-        © {currentYear} Jessica Do. All rights reserved.
+        © {currentYear} JESSICA DO.
       </p>
     </footer>
   );

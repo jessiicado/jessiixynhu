@@ -4,67 +4,50 @@ import Clock from "../ui/Clock";
 import gsap from "gsap";
 
 function Hero() {
-  const img = useRef(null);
-  const imgContainer = useRef(null);
   const titles = useRef([]);
   const transitionImage = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ repeat: -1, yoyo: true });
+    const tl = gsap.timeline({ repeat: 0 });
 
-    // Initial image & title animations
-    tl.from(imgContainer.current, {
-      scale: 1.3,
-      duration: 3.25,
+    // Transition image appears first
+    tl.to(transitionImage.current, {
+      opacity: 1,
+      scale: 1.2,
+      duration: 1.5,
       ease: "power3.inOut",
-    })
-      .from(
-        img.current,
-        { scale: 2, duration: 3.2, ease: "power4.inOut" },
-        "-=3.1"
-      )
-      .to(
-        titles.current[0],
-        { y: -100, opacity: 0, duration: 1.5, ease: "power4.inOut" },
-        "-=1"
-      )
-      .to(
-        transitionImage.current,
-        { opacity: 1, scale: 1.1, duration: 1.5, ease: "power2.inOut" },
-        "-=1"
-      )
-      .to(transitionImage.current, {
-        opacity: 0,
-        scale: 1.2,
+    });
+
+    // Title appears from above and eases down
+    tl.to(
+      [titles.current[0], titles.current[1]], // Titles appear simultaneously
+      {
+        y: 20, // Moves down into view
+        opacity: 1,
         duration: 1.5,
-        ease: "power2.inOut",
-      })
-      .from(
-        titles.current[1],
-        { y: 100, opacity: 0, duration: 1.5, ease: "power4.inOut" },
-        "-=1"
-      );
+        ease: "power3.out",
+      },
+      "+=0.3" // Slight overlap with image animation
+    );
   }, []);
 
   return (
     <section
       id="Home"
-      className="hero relative flex w-full h-full select-none z-0 items-center justify-center"
+      className="hero relative flex w-full h-full select-none z-50 items-center justify-center"
       aria-label="hero"
     >
-      <div className=" flex flex-col h-screen w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300">
-        <div className="title 2xl:py-[0rem]">
-          {/* Learn more about useRef */}
-          <h1
-            ref={(el) => (titles.current[0] = el)}
-            className="translate-y-96 overflow-visible"
-          >
+      <div className="flex flex-col h-screen w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300">
+        <div className="title 2xl:py-[0rem] translate-y-[-1rem]">
+          <h1 ref={(el) => (titles.current[0] = el)} className=" opacity-0">
             JESSICA DO
           </h1>
         </div>
+
+        {/* Image that transitions in */}
         <div
           ref={transitionImage}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 opacity-0"
         >
           <img
             src={darkHero}
@@ -73,13 +56,14 @@ function Hero() {
           />
         </div>
 
-        <div className=" title 2xl:py-[25rem]">
-          <h1 ref={(el) => (titles.current[1] = el)} className="translate-y-96">
+        <div className="title 2xl:py-[25rem] translate-y-[-2rem]">
+          <h1 ref={(el) => (titles.current[1] = el)} className=" opacity-0">
             JESSICA DO
           </h1>
         </div>
-        {/* Clock Component */}
-        <div className="bg-transparent z-0">
+
+        {/* Clock Component inside a container */}
+        <div className="bg-transparent z-50">
           <Clock />
         </div>
       </div>
