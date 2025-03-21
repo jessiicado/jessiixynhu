@@ -71,7 +71,7 @@ function Navbar() {
           )}
 
           {/* NAV BAR LINKS */}
-          <ul className="nav-links flex items-center justify-end ">
+          <ul className="nav-links flex items-center justify-end font-medium">
             <li>
               <a href="#Home">HOME</a>
             </li>

@@ -154,38 +154,34 @@ body {
 /* HERO */
 .hero {
   font-family: "Epilogue", sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* ABOUT */
 
-.Profile {
-  background-image: url("/src/assets/images/nature3.JPG");
-  background-size: contain;
-  width: 50%;
-  height: 100%;
-  transition: background-image 0.3s ease, color 0.3s ease;
-  z-index: 0;
-}
-
-.About,
 .Hero,
-.Projects,
-.Contact {
+.Projects {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
 
+/* #rightcontainer {
+  position: sticky;
+  top: 0;
+} */
+.About .rightcontainer {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 .About .nav-links {
   color: white;
 }
 .about-section {
   border-bottom: solid 2px orange;
 }
+
 /* PROJECTS */
-.Projects {
-  overflow: hidden;
-}
 
 .Project-header {
   font-family: "Telma", cursive;
