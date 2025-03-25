@@ -25,7 +25,11 @@ const Projects = () => {
   }
 
   return (
-    <section alt="Projects" id="Projects" className="Projects h-[200vh] w-full">
+    <section
+      alt="Projects"
+      id="Projects"
+      className="Projects h-[200vh] w-full relative"
+    >
       <div className="Project-header -z-1 overflow-hidden" id="project-header">
         <Project id={1} />
       </div>

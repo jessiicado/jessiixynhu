@@ -2,7 +2,7 @@
 @import "./styles/global.css";
 
 @theme {
-  --font-black: "Epilogue", sans-serif;
+  --font-epilogue: "Epilogue", sans-serif;
   --font-display: "Satoshi", sans-serif;
   --font-pixel: "Pixelify Sans", sans-serif;
   --font-kola: "Kola", sans-serif;
@@ -12,6 +12,8 @@
   --font-new: "New Title", serif;
   --font-bonny: "Bonny", serif;
   --font-tabular: "Tabular", sans-serif;
+  --font-courier: "Courier New", Courier, monospace;
+  --font-gambarino: "Gambarino", serif;
 
   --lightcolor: #dde2d6;
   --darkcolor: #1e1e1e;
@@ -164,7 +166,6 @@ body {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
-
 
 .About .rightcontainer {
   position: sticky;
