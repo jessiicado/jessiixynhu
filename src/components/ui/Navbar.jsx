@@ -71,7 +71,7 @@ function Navbar() {
           )}
 
           {/* NAV BAR LINKS */}
-          <ul className="nav-links flex items-center justify-end font-medium">
+          <ul className="nav-links flex items-center justify-end font-medium ">
             <li>
               <a href="#Home">HOME</a>
             </li>
@@ -87,7 +87,7 @@ function Navbar() {
             <li>
               <div className="left-navbar ">
                 {/* RESUME BUTTON */}
-                <div className="resumebtn bg-[#1e1e1e] px-4 py-2 font-normal font-black text-white rounded-full">
+                <div className="resumebtn bg-[#1e1e1e] px-4 py-2 font-epilogue text-white rounded-full hover:bg-indigo-400">
                   <button
                     onClick={ResumeRoute}
                     style={{ cursor: "pointer" }}

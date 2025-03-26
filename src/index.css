@@ -18,6 +18,7 @@
   --lightcolor: #dde2d6;
   --darkcolor: #1e1e1e;
   --light-accent-color: #2c2929;
+  --accent-color: oklch(0.785 0.115 274.713);
 }
 
 :root {
@@ -118,7 +119,9 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* DARKTOGGLE */
+.resumebtn:active {
+  background-color: var(--accent-color);
+}
 
 /* NAV */
 
@@ -152,7 +155,10 @@ body {
 .nav-links a:hover::before {
   width: 100%; /* Expand the width on hover */
 }
-
+.nav-links a:hover {
+  width: 100%; /* Expand the width on hover */
+  color: var(--accent-color);
+}
 /* HERO */
 .hero {
   font-family: "Epilogue", sans-serif;
@@ -176,14 +182,13 @@ body {
 .About .nav-links {
   color: white;
 }
-.about-section {
+.hero {
   border-bottom: solid 2px orange;
 }
 
 /* PROJECTS */
 
 .Project-header {
-  font-family: "Telma", cursive;
   display: flex;
   justify-content: center;
   align-items: center;

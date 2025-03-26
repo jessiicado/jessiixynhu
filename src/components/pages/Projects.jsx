@@ -3,12 +3,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { motion, useScroll, useTransform } from "framer-motion";
-
+import Carousel from "../ui/Carousel";
 const Projects = () => {
-  // function useParallax(value, distance) {
-  //   return useTransform(value, [0, 1], [-distance, distance]);
-  // }
-
   const valentineLink = () => {
     window.location.href = "https://jessiicado.github.io/valentine/";
   };
@@ -33,13 +29,17 @@ const Projects = () => {
       <div className="Project-header -z-1 overflow-hidden" id="project-header">
         <Project id={1} />
       </div>
-      <div className="relative w-full h-full">
+      <div className="flex justify-center">
+        <Carousel />
+      </div>
+
+      {/* <div className="relative w-full h-full">
         <div className="wholesection relative w-full h-full">
           <div className="Project-1" id="proj1">
-            {/* Green background rotated element */}
+           
             <div className="portfolio absolute w-[700px] h-[700px] top-0 left-[10rem]">
               <div className="card1 absolute w-[700px] h-[700px] top-[2rem] left-0 bg-[url(src/assets/images/portfolio-pic.png)] hover:opacity-50 transition-opacity duration-200" />
-              {/* Month/Year display */}
+            
               <div className="date absolute top-[42rem] left-[1rem] text-5xl font-black z-25">
                 <h1 className="text-black">JAN 2025</h1>
               </div>
@@ -79,7 +79,7 @@ const Projects = () => {
               style={{ cursor: "pointer" }}
             />
             <link href="https://jessiicado.github.io/valentine/"></link>
-            {/* Month/Year display */}
+            
             <div className="date absolute top-[42rem] left-[1rem] text-5xl font-black z-25">
               <h1 className="text-black">JAN 2025</h1>
             </div>
@@ -101,7 +101,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
