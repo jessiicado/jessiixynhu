@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { motion, useScroll, useTransform } from "framer-motion";
-import Carousel from "../ui/Carousel";
+
 const Projects = () => {
   const valentineLink = () => {
     window.location.href = "https://jessiicado.github.io/valentine/";
@@ -11,97 +11,74 @@ const Projects = () => {
   function Project({ id }) {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref });
-    const y = useTransform(scrollYProgress, [0, 1], [0, -500]);
+    const y = useTransform(scrollYProgress, [0, 1], [-100, -600]);
 
     return (
-      <motion.h1 ref={ref} className="pt-[0rem] text-10xl z-0" style={{ y }}>
+      <motion.h1 ref={ref} className=" text-10xl z-0" style={{ y }}>
         PROJECTS
       </motion.h1>
     );
   }
 
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: "#Projects",
+      start: "top 80%",
+      end: "bottom 60%",
+      onEnter: () => {
+        gsap.to("#proj1", {
+          opacity: 1,
+          duration: 0.5,
+          ease: "power1.inOut",
+        });
+        gsap.to(".Project-2", {
+          opacity: 1,
+          duration: 0.5,
+          ease: "power1.inOut",
+        });
+      },
+      onLeaveBack: () => {
+        gsap.to("proj2", {
+          opacity: 0,
+          duration: 0.5,
+          ease: "power1.inOut",
+        });
+        gsap.to("Project-2", {
+          opacity: 0,
+          duration: 0.5,
+          ease: "power1.inOut",
+        });
+      },
+    });
+  }, []);
+
   return (
     <section
       alt="Projects"
       id="Projects"
-      className="Projects h-[200vh] w-full relative"
+      className="Projects h-[150rem] w-full relative"
     >
       <div className="Project-header -z-1 overflow-hidden" id="project-header">
         <Project id={1} />
       </div>
-      <div className="flex justify-center">
-        <Carousel />
-      </div>
 
-      {/* <div className="relative w-full h-full">
-        <div className="wholesection relative w-full h-full">
-          <div className="Project-1" id="proj1">
-           
-            <div className="portfolio absolute w-[700px] h-[700px] top-0 left-[10rem]">
-              <div className="card1 absolute w-[700px] h-[700px] top-[2rem] left-0 bg-[url(src/assets/images/portfolio-pic.png)] hover:opacity-50 transition-opacity duration-200" />
-            
-              <div className="date absolute top-[42rem] left-[1rem] text-5xl font-black z-25">
-                <h1 className="text-black">JAN 2025</h1>
-              </div>
-              <div className="techstack absolute top-[48rem] text-xl">
-                <ul className="flex flex-row gap-2">
-                  <li className="border-2 py-2 px-4 rounded-full">
-                    <a>JAVASCRIPT</a>
-                  </li>
-                  <li className="border-2 py-2 px-4 rounded-full">
-                    <a>HTML/CSS</a>
-                  </li>
-                  <li className="border-2 py-2 px-4 rounded-full">
-                    <a>REACT</a>
-                  </li>
-                  <li className="border-2 py-2 px-4 rounded-full">
-                    <a>TAILWINDCSS</a>
-                  </li>
-                  <li className="border-2 py-2 px-4 rounded-full">
-                    <a>GSAP</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="absolute top-[52rem] font-bold font-gerneral">
-                <h1 className="text-3xl">PORFOLIO WEBSITE</h1>
-                <p className="text-2xl pt-5 font-normal">
-                  You're already here!
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="Project-2" id="proj2"></div>
-          <div className="valentine absolute w-[700px] h-[700px] top-[10rem] right-[10rem]">
-            <div
-              className="eachcard absolute w-[700px] h-[700px] top-[2rem] hover:opacity-50 transition-opacity duration-200 left-0 bg-[url(src/assets/images/valentine-pic.png)]"
-              onClick={valentineLink}
-              style={{ cursor: "pointer" }}
-            />
-            <link href="https://jessiicado.github.io/valentine/"></link>
-            
-            <div className="date absolute top-[42rem] left-[1rem] text-5xl font-black z-25">
-              <h1 className="text-black">JAN 2025</h1>
-            </div>
-            <div className="techstack absolute top-[48rem] text-xl">
-              <ul className="flex flex-row gap-2">
-                <li className="border-2 py-2 px-4 rounded-full">
-                  <a>JAVASCRIPT</a>
-                </li>
-                <li className="border-2 py-2 px-4 rounded-full">
-                  <a>HTML/CSS</a>
-                </li>
-              </ul>
-            </div>
-            <div className="absolute top-[52rem] font-bold font-gerneral">
-              <h1 className="text-3xl">VALENTINE'S DAY WEB APP</h1>
-              <p className="text-2xl pt-5 font-normal">
-                Website utilized for that special someone.
-              </p>
+      <div className="projectsection grid grid-cols-3 justify-center place-items-center">
+        <div className="proj1 h-100 w-9/12 bg-lime-300" id="proj1">
+          <div className="card-info flex flex-col">
+            <div className="tech-stack flex flex-row gap-2">
+              <h1>JAVASCRIPT</h1>
+              <h1>HTML/CSS</h1>
+              <h1>REACT</h1>
             </div>
           </div>
         </div>
-      </div> */}
+        <div className="proj2 h-100 w-9/12 bg-lime-300" id="proj2">
+          <h1>Hello</h1>
+        </div>
+        <div className="proj1 h-100 w-9/12 bg-lime-300" id="proj3">
+          <h1>Hello</h1>
+        </div>
+      </div>
     </section>
   );
 };
