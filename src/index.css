@@ -101,12 +101,6 @@ body {
 
 /* ABOUT */
 
-.Hero,
-.Projects {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
 .About .rightcontainer {
   position: sticky;
   top: 0;
@@ -116,14 +110,14 @@ body {
 .About .nav-links {
   color: white;
 }
-.hero {
+/* .hero {
   border-bottom: solid 2px orange;
 }
 
 .Projects {
   border-top: solid 2px blue;
   border-bottom: solid 2px orange;
-}
+} */
 /* PROJECTS */
 
 .Project-header {

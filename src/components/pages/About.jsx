@@ -15,16 +15,15 @@ const About = () => {
         gsap.to(".About", {
           opacity: 1,
 
-          duration: 0.5,
-          ease: "power1.inOut",
+          duration: 0.3,
+          ease: "power1.in",
         });
       },
       onLeaveBack: () => {
         gsap.to(".About", {
           opacity: 0,
 
-          duration: 0.5,
-          ease: "power1.inOut",
+          duration: 0.3,
         });
       },
     });
@@ -33,7 +32,7 @@ const About = () => {
   useEffect(() => {
     ScrollTrigger.create({
       trigger: "#Projects",
-      start: "top 60%",
+      start: "top 40%",
       end: "bottom 60%",
       onEnter: () => {
         gsap.to("body", {
@@ -158,7 +157,7 @@ const About = () => {
         />
       </div>
 
-      <div className="rightcontainer w-1/2 h-full flex flex-col justify-center items-start p-10">
+      <div className="rightcontainer fixed top-0 right-0 h-screen w-1/2 flex flex-col justify-center items-start p-10 bg-opacity-80">
         <div className="about-title grid text-stone-900 tracking-widest">
           <h1 className="text-8xl font-gambarino font-black tracking-wider text-center pb-5">
             jessica

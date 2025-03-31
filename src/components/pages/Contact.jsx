@@ -7,13 +7,24 @@ const Contact = () => {
   useEffect(() => {
     ScrollTrigger.create({
       trigger: "#Contact",
-      start: "top 60%",
-      end: "bottom 60%",
+      start: "top 80%",
+      end: "bottom 20%",
       onEnter: () => {
         gsap.to("body", {
           backgroundColor: "#eaece5",
           color: "#000000",
-          duration: 0.2,
+          duration: 0.3,
+          ease: "power1.inOut",
+        });
+        gsap.to(".cards", {
+          color: "#ffffff",
+          duration: 0.3,
+          ease: "power1.inOut",
+        });
+        gsap.to(".Footer", {
+          backgroundColor: "#eaece5",
+          color: "#000000",
+          duration: 0.3,
           ease: "power1.inOut",
         });
       },
@@ -21,7 +32,18 @@ const Contact = () => {
         gsap.to("body", {
           backgroundColor: "#1e1e1e",
           color: "#ffffff",
-          duration: 0.2,
+          duration: 0.3,
+          ease: "power1.inOut",
+        });
+        gsap.to(".cards", {
+          color: "#ffffff",
+          duration: 0.3,
+          ease: "power1.inOut",
+        });
+        gsap.to(".Footer", {
+          backgroundColor: "#1e1e1e",
+          color: "#ffffff",
+          duration: 0.3,
           ease: "power1.inOut",
         });
       },
@@ -92,13 +114,11 @@ const Contact = () => {
 
       {/* Right Section - Message */}
       <div className="rightsection flex flex-col justify-center items-center text-center md:w-5/12 p-6">
-        <h3 className="text-3xl font-tabular">
-          Got questions? Or just want to chat about tech and life? Hit me up!
-          Whether you're looking to collaborate, share ideas, or just want to
-          say hi, I’d love to hear from you. Let’s connect and create something
-          awesome together!
+        <h3 className="text-5xl font-tabular">
+          Feel free to reach out! I'd love to hear from you, whether it's for a
+          project, a question, or just to chat. Let's connect!
         </h3>
-        <h2 className="text-2xl pt-10">⊹₊ ˚‧︵‿₊୨୧₊‿︵‧ ˚ ₊⊹</h2>
+        <h2 className="text-3xl pt-10">⊹₊ ˚‧︵‿₊୨୧₊‿︵‧ ˚ ₊⊹</h2>
       </div>
     </section>
   );

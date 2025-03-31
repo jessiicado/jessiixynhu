@@ -87,7 +87,7 @@ function Navbar() {
             <li>
               <div className="left-navbar ">
                 {/* RESUME BUTTON */}
-                <div className="resumebtn bg-[#1e1e1e] px-4 py-2 font-epilogue text-white rounded-full hover:bg-indigo-400">
+                <div className="resumebtn bg-[#1e1e1e] px-4 py-2 font-epilogue text-white rounded-full">
                   <button
                     onClick={ResumeRoute}
                     style={{ cursor: "pointer" }}
