@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import darkHero from "/src/assets/images/dark-hero.jpg";
 import Clock from "../ui/Clock";
 import gsap from "gsap";
@@ -37,7 +37,7 @@ function Hero() {
       className="hero relative flex w-full h-full select-none z-50 items-center justify-center"
       aria-label="hero"
     >
-      <div className="flex flex-col h-screen w-full items-center text-title 2xl:text-[8vw] lg:translate-y-[-1rem] lg:ext-8vw 2xl:space-y-16 font-bold uppercase text-accent-300">
+      <div className="flex flex-col h-screen w-full items-center text-title 2xl:text-[8vw] lg:translate-y-[-1rem] lg:ext-8vw md:text-[6vw] 2xl:space-y-16 font-bold uppercase text-accent-300">
         <div className="title 2xl:py-0 translate-y-[-1rem]">
           <h1 ref={(el) => (titles.current[0] = el)} className=" opacity-0">
             JESSICA DO

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import nature from "/src/assets/images/nature.jpg";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
