@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import darkHero from "/src/assets/images/dark-hero.jpg";
 import Clock from "../ui/Clock";
 import gsap from "gsap";
@@ -94,7 +94,7 @@ function Hero() {
       {
         y: 20, // Moves down into view
         opacity: 1,
-        duration: 3.5,
+        duration: 1.5,
         ease: "power3.out",
       },
       "-=1.7"
