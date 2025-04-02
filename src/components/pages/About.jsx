@@ -10,7 +10,7 @@ const About = () => {
     const createScrollTrigger = (triggerId, enterCallback, leaveCallback) => {
       ScrollTrigger.create({
         trigger: triggerId,
-        start: "top 25%",
+        start: "top 50%",
         end: "bottom 70%",
         onEnter: enterCallback,
         onLeaveBack: leaveCallback,
