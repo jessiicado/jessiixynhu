@@ -7,140 +7,71 @@ gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   useEffect(() => {
-    ScrollTrigger.create({
-      trigger: "#About",
-      start: "top 25%",
-      end: "bottom 70%",
-      onEnter: () => {
+    const createScrollTrigger = (triggerId, enterCallback, leaveCallback) => {
+      ScrollTrigger.create({
+        trigger: triggerId,
+        start: "top 25%",
+        end: "bottom 70%",
+        onEnter: enterCallback,
+        onLeaveBack: leaveCallback,
+      });
+    };
+
+    // About Section ScrollTrigger
+    createScrollTrigger(
+      "#About",
+      () => {
         gsap.to(".About", {
           opacity: 1,
-
           duration: 0.3,
           ease: "power1.in",
         });
       },
-      onLeaveBack: () => {
+      () => {
         gsap.to(".About", {
           opacity: 0,
-
           duration: 0.3,
         });
-      },
-    });
-  }, []);
+      }
+    );
 
-  useEffect(() => {
-    ScrollTrigger.create({
-      trigger: "#Projects",
-      start: "top 40%",
-      end: "bottom 60%",
-      onEnter: () => {
-        gsap.to("body", {
-          backgroundColor: "#1e1e1e",
-          color: "#ffffff",
-          duration: 0.5,
-          ease: "power1.inOut",
-        });
-        gsap.to("#Logos", {
-          fill: "#ffffff",
-          duration: 0.5,
-          ease: "power1.inOut",
-        });
+    // Projects Section ScrollTrigger
+    createScrollTrigger(
+      "#Projects",
+      () => {
         gsap.to(".rightcontainer", {
           color: "#ffffff",
           duration: 0.5,
           ease: "power1.inOut",
         });
-        gsap.to(".resumebtn", {
-          backgroundColor: "#ffffff",
-          color: "#000000",
-          duration: 0.5,
-          ease: "power1.inOut",
-        });
       },
-      onLeaveBack: () => {
-        gsap.to("body", {
-          backgroundColor: "#eaece5",
-          color: "#000000",
-          duration: 0.5,
-          ease: "power1.inOut",
-        });
-        gsap.to("#Logos", {
-          fill: "#000000",
-          duration: 0.5,
-          ease: "power1.inOut",
-        });
+      () => {
         gsap.to(".rightcontainer", {
           color: "#000000",
           duration: 0.5,
           ease: "power1.inOut",
         });
-        gsap.to(".resumebtn", {
-          backgroundColor: "#1e1e1e",
-          color: "#ffffff",
-          duration: 0.5,
-          ease: "power1.inOut",
-        });
-      },
-    });
-  }, []);
+      }
+    );
 
-  // CONTACT
-
-  useEffect(() => {
-    ScrollTrigger.create({
-      trigger: "#Contact",
-      start: "top 60%",
-      end: "bottom 60%",
-      onEnter: () => {
-        gsap.to("body", {
-          backgroundColor: "#eaece5",
-          color: "#000000",
-          duration: 0.5,
-          ease: "power1.inOut",
-        });
-        gsap.to("#Logos", {
-          fill: "#000000",
-          duration: 0.5,
-          ease: "power1.inOut",
-        });
+    // Contact Section ScrollTrigger
+    createScrollTrigger(
+      "#Contact",
+      () => {
         gsap.to(".rightcontainer", {
           color: "#000000",
           duration: 0.5,
           ease: "power1.inOut",
         });
-        gsap.to(".resumebtn", {
-          backgroundColor: "#1e1e1e",
-          color: "#ffffff",
-          duration: 0.5,
-          ease: "power1.inOut",
-        });
       },
-      onLeaveBack: () => {
-        gsap.to("body", {
-          backgroundColor: "#1e1e1e",
-          color: "#ffffff",
-          duration: 0.2,
-          ease: "power1.inOut",
-        });
-        gsap.to("#Logos", {
-          fill: "#ffffff",
-          duration: 0.2,
-          ease: "power1.inOut",
-        });
+      () => {
         gsap.to(".rightcontainer", {
           color: "#ffffff",
           duration: 0.2,
           ease: "power1.inOut",
         });
-        gsap.to(".resumebtn", {
-          backgroundColor: "#ffffff",
-          color: "#000000",
-          duration: 0.2,
-          ease: "power1.inOut",
-        });
-      },
-    });
+      }
+    );
   }, []);
 
   return (

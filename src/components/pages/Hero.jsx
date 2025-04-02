@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useRef, useEffect, useState } from "react";
-=======
-import { useRef, useEffect } from "react";
->>>>>>> 54b1d8d75c11809ebc0978a92957aa24d607a7ba
 import darkHero from "/src/assets/images/dark-hero.jpg";
 import Clock from "../ui/Clock";
 import gsap from "gsap";
@@ -11,7 +7,7 @@ function Hero() {
   const name = useRef(null); // Ref for name element
   const titleRef = useRef(null); // Ref for title element
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
-  const titleContent = ["student", "developer", "coffee lover", "creator"];
+  const titleContent = ["student", "developer", "creator"];
   const nameContent = "jessica do"; // Name content to scramble
 
   // Function to scramble text
@@ -84,7 +80,7 @@ function Hero() {
     tl.to(
       titleRef.current,
       {
-        y: 20, // Moves down into view
+        y: 100, // Moves down into view
         opacity: 1,
         duration: 1.5,
         ease: "power3.out",
@@ -108,30 +104,17 @@ function Hero() {
   return (
     <section
       id="Home"
-      className="hero relative flex w-full h-full select-none z-50 items-center justify-center"
+      className="hero relative flex w-full h-full z-50 items-center justify-center"
       aria-label="hero"
     >
-<<<<<<< HEAD
-      <div className="flex h-screen w-full items-center justify-center">
-        {/* Column 1 */}
-        <div className="head flex flex-col items-center gap-[30rem] md:gap-[35rem] z-50 font-gambarino">
+      <div className="flex flex-col h-screen w-full items-center 2xl:text-[2rem] lg:translate-y-[-1rem] lg:text-8vw md:text-[1.5rem] font-gambarino lowercase">
+        <div className="title 2xl:py-0 translate-y-[12rem] flex flex-col gap-y-[25rem] md: gap-y-[30rem] xl:gap-y-[32rem] 2xl:gap-y-[35rem] z-50 2xl:translate-y-[15rem]">
           <h1
-            ref={titleRef} // Single ref for the title
-            className="text-2xl font-medium"
-          >
-            Student {/* Default text that will be dynamically replaced */}
-          </h1>
-          <h1
-            ref={name} // Single ref for the name, will also be scrambled
-            className="text-3xl font-medium"
-          >
-            jessica do {/* Default text for the name */}
-=======
-      <div className="flex flex-col h-screen w-full items-center text-title 2xl:text-[8vw] lg:translate-y-[-1rem] lg:ext-8vw md:text-[6vw] 2xl:space-y-16 font-bold uppercase text-accent-300">
-        <div className="title 2xl:py-0 translate-y-[-1rem]">
-          <h1 ref={(el) => (titles.current[0] = el)} className=" opacity-0">
-            JESSICA DO
->>>>>>> 54b1d8d75c11809ebc0978a92957aa24d607a7ba
+            ref={titleRef}
+            className="opacity-0 justify-center items-center"
+          ></h1>
+          <h1 ref={name} className="opacity-0">
+            Jessica Do
           </h1>
         </div>
 
