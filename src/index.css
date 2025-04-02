@@ -34,15 +34,18 @@ form {
   display: none;
 }
 
+html {
+  overflow-x: hidden; /* Optional: prevents horizontal scrolling */
+}
 * {
   margin: 0;
   box-sizing: border-box;
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
-}
+} */
+
 html,
 body {
   padding: 0;
@@ -115,14 +118,6 @@ body {
 
 .About .nav-links {
   color: white;
-}
-.hero {
-  border-bottom: solid 2px orange;
-}
-
-.Projects {
-  border-top: solid 2px blue;
-  border-bottom: solid 2px orange;
 }
 
 /* PROJECTS */

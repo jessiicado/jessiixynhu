@@ -2,9 +2,9 @@ import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { motion, useScroll, useTransform } from "framer-motion";
-import discord from "src/assets/images/discordbot.png";
-import valentine from "src/assets/images/valentine-pic.png";
-import photo from "src/assets/images/dark-hero.png";
+import discordbot from "/src/assets/images/discordbot.png";
+import valentinepic from "/src/assets/images/valentine-pic.png";
+import darkHero from "/src/assets/images/dark-hero.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,7 +55,7 @@ const Works = () => {
       link: "http://localhost:5173/#Projects",
       tech: ["2025", "HTML • CSS • JS", "REACT", "TAILWINDCSS"],
       description: "You're already here!",
-      image: {photo},
+      image: darkHero,
     },
     {
       title: "Valentine's Day Web App",
@@ -64,7 +64,7 @@ const Works = () => {
       tech: ["2025", "HTML • CSS • JS", "TAILWINDCSS"],
       description:
         "An interactive, playful web app where users can receive a fun and dynamic Valentine’s Day message.",
-      image: {valentine},
+      image: valentinepic,
     },
     {
       title: "Stock Market Simulator Discord Bot",
@@ -73,7 +73,7 @@ const Works = () => {
       tech: ["2025", "NODE.JS", "WORK-IN-PROGRESS"],
       description:
         "A Discord bot that simulates stock trading with virtual currency, letting users buy, sell, and track stocks while mimicking real market trends.",
-      image: {discord},
+      image: discordbot,
     },
   ];
 
