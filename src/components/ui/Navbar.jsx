@@ -34,7 +34,7 @@ function Navbar() {
     const tl = gsap.timeline();
 
     tl.from(
-      [".logos", ".nav-links li"],
+      [".logos", ".nav-links li", ".closemenu"],
       {
         opacity: 0,
         y: -20,
@@ -44,7 +44,7 @@ function Navbar() {
       "+=0.5" // Starts the navbar animation 0.5s before the logo animation finishes
     );
     tl.to(
-      [".logos", ".nav-links li"],
+      [".logos", ".nav-links li", ".closemenu"],
       {
         opacity: 1,
         y: 0,
@@ -59,19 +59,27 @@ function Navbar() {
     <section className="entire-navbar fixed z-50">
       <div className="right-navbar">
         <nav className="Navigation">
-          {/* Mobile Menu Button */}
-          {isMobile && (
-            <button
-              className={`menu-open xs:fixed xs:top-[1rem] `}
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Toggle Menu"
-            >
-              {menuOpen ? <X size={40} /> : <Menu size={40} />}
-            </button>
-          )}
-
           {/* NAV BAR LINKS */}
-          <ul className="nav-links flex items-center justify-end font-medium ">
+          <ul
+            className={`nav-links font-medium space-y-4 md:space-y-0 md:flex md:items-center md:justify-end ${
+              menuOpen
+                ? "flex flex-col absolute top-16 right-4 bg-white shadow-lg p-6 rounded-lg"
+                : "hidden"
+            } md:flex md:space-x-6`}
+          >
+            {/* Close X Icon */}
+            {menuOpen && (
+              <li className="w-full flex justify-end">
+                <button
+                  className="close-menu "
+                  onClick={() => setMenuOpen(false)}
+                  aria-label="Close Menu"
+                >
+                  <X size={20} />
+                </button>
+              </li>
+            )}
+
             <li>
               <a href="#Home">HOME</a>
             </li>
@@ -85,7 +93,7 @@ function Navbar() {
               <a href="#Contact">CONTACT</a>
             </li>
             <li>
-              <div className="left-navbar ">
+              <div className="left-navbar">
                 {/* RESUME BUTTON */}
                 <div className="resumebtn bg-[#1e1e1e] px-4 py-2 font-epilogue text-white rounded-full">
                   <button
@@ -93,7 +101,7 @@ function Navbar() {
                     style={{ cursor: "pointer" }}
                     className="resume-btn"
                   >
-                    Resume{" "}
+                    Resume
                   </button>
                 </div>
               </div>
@@ -102,6 +110,7 @@ function Navbar() {
         </nav>
       </div>
 
+      {/* Logo */}
       <div
         className="logos absolute top-4 left-4"
         onClick={isReload}
@@ -131,6 +140,17 @@ function Navbar() {
           />
         </svg>
       </div>
+
+      {/* Mobile Menu Button */}
+      {isMobile && !menuOpen && (
+        <button
+          className="menu-open fixed top-1 right-1 z-50"
+          onClick={() => setMenuOpen(true)}
+          aria-label="Toggle Menu"
+        >
+          <Menu size={40} />
+        </button>
+      )}
     </section>
   );
 }

@@ -14,6 +14,8 @@
   --font-tabular: "Tabular", sans-serif;
   --font-courier: "Courier New", Courier, monospace;
   --font-gambarino: "Gambarino", serif;
+  --font-inter: "Inter", sans-serif;
+  --font-cinzel: "Cinzel Decorative", serif;
 
   --lightcolor: #dde2d6;
   --darkcolor: #1e1e1e;
@@ -99,6 +101,10 @@ body {
   /* overflow: hidden; */
 }
 
+.head {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
 /* ABOUT */
 
 .About .rightcontainer {
@@ -110,14 +116,15 @@ body {
 .About .nav-links {
   color: white;
 }
-/* .hero {
+.hero {
   border-bottom: solid 2px orange;
 }
 
 .Projects {
   border-top: solid 2px blue;
   border-bottom: solid 2px orange;
-} */
+}
+
 /* PROJECTS */
 
 .Project-header {

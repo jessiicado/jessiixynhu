@@ -4,7 +4,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="Footer p-5 flex justify-start">
+    <footer className="Footer p-5 flex justify-start relative">
       <p className="font-tabular font-bold text-xl">
         © {currentYear} JESSICA DO.
       </p>
