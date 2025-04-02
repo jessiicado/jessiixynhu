@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useRef, useEffect, useState } from "react";
+=======
+import { useRef, useEffect } from "react";
+>>>>>>> 54b1d8d75c11809ebc0978a92957aa24d607a7ba
 import darkHero from "/src/assets/images/dark-hero.jpg";
 import Clock from "../ui/Clock";
 import gsap from "gsap";
@@ -107,6 +111,7 @@ function Hero() {
       className="hero relative flex w-full h-full select-none z-50 items-center justify-center"
       aria-label="hero"
     >
+<<<<<<< HEAD
       <div className="flex h-screen w-full items-center justify-center">
         {/* Column 1 */}
         <div className="head flex flex-col items-center gap-[30rem] md:gap-[35rem] z-50 font-gambarino">
@@ -121,6 +126,12 @@ function Hero() {
             className="text-3xl font-medium"
           >
             jessica do {/* Default text for the name */}
+=======
+      <div className="flex flex-col h-screen w-full items-center text-title 2xl:text-[8vw] lg:translate-y-[-1rem] lg:ext-8vw md:text-[6vw] 2xl:space-y-16 font-bold uppercase text-accent-300">
+        <div className="title 2xl:py-0 translate-y-[-1rem]">
+          <h1 ref={(el) => (titles.current[0] = el)} className=" opacity-0">
+            JESSICA DO
+>>>>>>> 54b1d8d75c11809ebc0978a92957aa24d607a7ba
           </h1>
         </div>
 
