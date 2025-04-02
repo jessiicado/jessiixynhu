@@ -52,7 +52,7 @@ const Works = () => {
       link: "http://localhost:5173/#Projects",
       tech: ["2025", "HTML • CSS • JS", "REACT", "TAILWINDCSS"],
       description: "You're already here!",
-      image: "src/assets/images/portfolio-pic.png",
+      image: "src/assets/images/dark-hero.png",
     },
     {
       title: "Valentine's Day Web App",
