@@ -85,7 +85,7 @@ function Hero() {
         duration: 1.5,
         ease: "power3.out",
       },
-      "+=0.3"
+      "+=1"
     );
 
     // Name appears from above and eases down
@@ -97,7 +97,7 @@ function Hero() {
         duration: 1.5,
         ease: "power3.out",
       },
-      "-=1.7"
+      "+=1.5"
     ); // Slight overlap with image animation
   }, []);
 
