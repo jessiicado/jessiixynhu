@@ -72,7 +72,7 @@ function Hero() {
     tl.to(transitionImage.current, {
       opacity: 1,
       scale: 1.2,
-      duration: 1.5,
+      duration: 2.5,
       ease: "power3.inOut",
     });
 
@@ -108,7 +108,7 @@ function Hero() {
       aria-label="hero"
     >
       <div className="flex flex-col h-screen w-full items-center 2xl:text-[2rem] lg:translate-y-[-1rem] lg:text-8vw md:text-[1.5rem] font-gambarino lowercase">
-        <div className="title 2xl:py-0 translate-y-[12rem] flex flex-col gap-y-[25rem] md: gap-y-[30rem] xl:gap-y-[32rem] 2xl:gap-y-[35rem] z-50 2xl:translate-y-[15rem]">
+        <div className="title 2xl:py-0 translate-y-[12rem] flex flex-col xs:translate-y-[15rem] xs:gap-y-[15rem] gap-y-[25rem] md: gap-y-[30rem] xl:gap-y-[32rem] 2xl:gap-y-[35rem] z-50 2xl:translate-y-[15rem]">
           <h1
             ref={titleRef}
             className="opacity-0 justify-center items-center"

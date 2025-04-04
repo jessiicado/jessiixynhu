@@ -39,7 +39,7 @@ const Clock = () => {
   const ampm = hours >= 12 ? "PM" : "AM";
   const formatHours = formatTime(hours % 12 || 12);
   return (
-    <section className="ClockLocation absolute bottom-[0.5rem] right-[1rem] gap-20 text-2xl lg:text-3xl 2xl:text-3xl font-gambarino font-bold justify-center text-right ">
+    <section className="ClockLocation absolute bottom-[0.5rem] xs:hidden right-[1rem] gap-20 text-2xl lg:text-3xl 2xl:text-3xl font-gambarino font-bold justify-center text-right ">
       <div className="clock" id="clock">
         {formatHours}:{formatTime(time.getMinutes())}:
         {formatTime(time.getSeconds())} {ampm}

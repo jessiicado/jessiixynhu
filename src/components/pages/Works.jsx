@@ -24,6 +24,8 @@ const Works = () => {
           setYValues([-50, -50]); // Medium shift for tablets
         } else if (window.innerWidth >= 1280) {
           setYValues([-50, -600]); // Medium shift for tablets
+        } else if (window.innerWidth >= 320) {
+          setYValues([50, -100]); // Medium shift for tablets
         } else {
           setYValues([-100, -600]); // Default for large screens
         }
@@ -40,7 +42,7 @@ const Works = () => {
     return (
       <motion.h1
         ref={ref}
-        className="text-[5rem] justify-center items-center md:text-[7rem] lg:text-[10rem] xl:text-[15rem] 2xl:text-[20rem] 2xl:pb-10 pb-20 z-0"
+        className="xs:text-[2rem] xs:pl-5 text-[5rem] justify-center items-center md:text-[7rem] lg:text-[10rem] xl:text-[15rem] 2xl:text-[20rem] 2xl:pb-10 pb-20 z-0"
         style={{ y }}
       >
         PROJECTS
@@ -84,11 +86,11 @@ const Works = () => {
       </div>
 
       {/* Project Cards */}
-      <div className="cards grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-25 lg:px-10 xl:px-10">
+      <div className="cards grid md:grid-cols-2 lg:grid-cols-3 gap-10 xs:px-18 px-25 lg:px-10 xl:px-10">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group bg-zinc-800 rounded-md overflow-hidden shadow-lg transition-all duration-300 hover:scale-105"
+            className="group bg-zinc-800 rounded-md overflow-hidden xs:w-[15rem] shadow-lg transition-all duration-300 hover:scale-105"
           >
             <a
               href={project.link}
@@ -99,7 +101,7 @@ const Works = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-100 md:h-45 lg:w-full lg:h-75 xl:w-full xl:h-150 object-cover"
+                className="w-full h-100 xs:h-40 md:h-45 lg:w-full lg:h-75 xl:w-full xl:h-150 object-cover"
               />
               <div className="p-4 md:p-6 lg:p-6 xl:p-6">
                 <h3 className="text-2xl py-2 md:py-2 lg:text-3xl xl:text-3xl lg:pb-5 xl:pb-5 font-semibold mb-2 font-inter font-medium">

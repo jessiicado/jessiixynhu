@@ -90,22 +90,22 @@ const About = () => {
 
       <div className="rightcontainer fixed top-0 right-0 h-screen w-1/2 flex flex-col justify-center items-start p-5 2xl:px-20 bg-opacity-80">
         <div className="about-title grid text-stone-900 tracking-widest">
-          <h1 className="text-6xl lg:text-7xl xl:text-8xl font-gambarino font-black tracking-wider text-center pb-5">
+          <h1 className="xs:text-4xl xs:pb-0 text-6xl lg:text-7xl xl:text-8xl font-gambarino font-black tracking-wider text-center pb-5">
             jessica
           </h1>
         </div>
 
-        <div className="viet whitespace-nowrap flex justify-center gap-y-20 items-center font-courier pb-2 lg:pb-10 xl:pb-10">
-          <h2 className="text-md lg:text-2xl xl:text-2xl font-medium">
+        <div className="viet xs:text-[0.6rem] xs:py-2 whitespace-nowrap flex justify-center gap-y-20 items-center font-courier pb-2 lg:pb-10 xl:pb-10">
+          <h2 className=" text-md lg:text-2xl xl:text-2xl font-medium">
             [jeh-see-cuh]
           </h2>
-          <p className="font-bold text-md xl:text-lg lg:text-lg">
+          <p className=" font-bold text-md xl:text-lg lg:text-lg">
             • Vietnamese
           </p>
         </div>
 
         <div className="info">
-          <p className="text-md lg:text-2xl text-start leading-relaxed lg:pb-5 xl:pb-10 2xl:text-3xl font-inter">
+          <p className="xs:text-xs text-md lg:text-2xl text-start leading-relaxed lg:pb-5 xl:pb-10 2xl:text-3xl font-inter">
             Hi! I'm a 2nd year majoring in Computer Science with a passion for
             technology and creativity. I'm excited about exploring the world of
             programming, web development, and digital design. I love capturing
@@ -115,7 +115,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="techstack flex justify-center pt-5 scale-75 xl:scale-100 items-center gap-x-5">
+        <div className="techstack flex justify-center pt-5 xs:scale-55 scale-75 xl:scale-100 items-center gap-x-5">
           <ul className="flex flex-row gap-5 lg:gap-x-5 xl:gap-x-5 flex-wrap">
             <li>
               {/* java */}
