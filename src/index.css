@@ -21,6 +21,9 @@
   --darkcolor: #1e1e1e;
   --light-accent-color: #2c2929;
   --accent-color: oklch(0.785 0.115 274.713);
+
+  --breakpoint-xs: 320px;
+  --breakpoint-s: 400px;
 }
 
 :root {
@@ -34,15 +37,18 @@ form {
   display: none;
 }
 
+html {
+  overflow-x: hidden; /* Optional: prevents horizontal scrolling */
+}
 * {
   margin: 0;
   box-sizing: border-box;
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
-}
+} */
+
 html,
 body {
   padding: 0;
@@ -116,14 +122,6 @@ body {
 .About .nav-links {
   color: white;
 }
-.hero {
-  border-bottom: solid 2px orange;
-}
-
-.Projects {
-  border-top: solid 2px blue;
-  border-bottom: solid 2px orange;
-}
 
 /* PROJECTS */
 
@@ -143,4 +141,15 @@ body {
 
 .Footer {
   background-color: var(--light-bg-color);
+}
+
+@media (max-width: 400px) {
+  html {
+    overflow-x: hidden;
+  }
+}
+@media (min-width: 320px) {
+  body {
+    overflow-x: hidden;
+  }
 }

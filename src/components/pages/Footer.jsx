@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer className="Footer p-5 flex justify-start relative">
-      <p className="font-tabular font-bold text-xl">
+      <p className="xs:text-sm font-tabular font-bold text-xl">
         © {currentYear} JESSICA DO.
       </p>
     </footer>
