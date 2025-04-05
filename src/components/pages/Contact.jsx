@@ -56,13 +56,13 @@ const Contact = () => {
       className="Contact flex h-screen w-full items-center relative justify-center px-6"
     >
       {/* Left Section - Contact Info */}
-      <div className="leftsection flex flex-col items-center text-start font-general font-bold md:w-5/12 gap-y-10">
+      <div className="leftsection flex flex-col xs:pl-5 items-center text-start font-general font-bold md:w-5/12 gap-y-10">
         <img
-          className="rounded-full xs:h-40 xs:w-40 h-50 w-50 lg:h-72 lg:w-72 xl:h-72 xl:w-72 object-cover"
+          className="rounded-full xs:h-40 xs:w-40 h-50 w-50 md:h-60 md:w-60 lg:h-72 lg:w-72 xl:h-72 xl:w-72 object-cover"
           src={coverPhoto}
           alt="coverphoto"
         />
-        <ul className="xs:text-sm text-xl gap-2 flex flex-col lg:text-2xl lg:gap-8 xl:text-2xl xl:gap-8 items-start">
+        <ul className="xs:text-sm gap-y-2 sm:text-xl sm:gap-y-5 md:text-xl lg:text-2xl lg:gap-8 xl:text-2xl xl:gap-8 items-start flex flex-col">
           <li>
             <a
               href="mailto:jessicanhu.do@gmail.com"
@@ -71,14 +71,14 @@ const Contact = () => {
               jessicanhu.do@gmail.com
             </a>
           </li>
-          <li className="flex flex-col xs:gap-y-2 gap-y-5">
+          <li className="flex flex-col gap-y-2">
             <a
               target="_blank"
               href="https://www.linkedin.com/in/jessicanhudo"
-              className="xs:text-sm text-xl lg:text-2xl xl:text-2xl hover:text-indigo-300 flex-row flex gap-2 items-center"
+              className="xs:text-sm xs:pl-5 sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl hover:text-indigo-300 flex-row flex gap-2 items-center"
             >
               <svg
-                className="xs:h-5 xs:w-5 lg:h-10 lg:w-10 xl:h-10 xl:w-10"
+                className="xs:h-5 xs:w-5 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:h-10 lg:w-10 xl:h-10 xl:w-10"
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
                 height="40"
@@ -91,10 +91,10 @@ const Contact = () => {
             <a
               target="_blank"
               href="https://www.github.com/jessiicado"
-              className="xs:text-sm text-xl lg:text-2xl xl:text-2xl hover:text-indigo-300 flex-row gap-2 flex items-center"
+              className="xs:text-sm xs:pl-5 sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl hover:text-indigo-300 flex-row gap-2 flex items-center"
             >
               <svg
-                className="xs:h-5 xs:w-5 lg:h-10 lg:w-10 xl:h-10 xl:w-10"
+                className="xs:h-5 xs:w-5 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:h-10 lg:w-10 xl:h-10 xl:w-10"
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
                 height="40"
@@ -109,15 +109,17 @@ const Contact = () => {
       </div>
 
       {/* Divider */}
-      <div className="hidden md:block h-2/3 w-[2px] bg-indigo-200 mx-6"></div>
+      <div className="xs:hidden sm:hidden  md:block h-2/3 w-[2px] bg-indigo-200 mx-6"></div>
 
       {/* Right Section - Message */}
       <div className="rightsection flex flex-col justify-center items-center text-center md:w-5/12 p-6">
-        <h3 className="xs:text-sm text-2xl lg:text-4xl xl:text-4xl font-tabular">
-          Feel free to reach out! I'd love to hear from you, whether it's for a
-          project, a question, or just to chat. Let's connect!
+        <h3 className="xs:text-[0.8rem] xs:p-2 sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-4xl font-tabular">
+          Feel free to reach out anytime. I’m always open to new opportunities
+          and connections!
         </h3>
-        <h2 className="xs:text-sm text-3xl pt-10">⊹₊ ˚‧︵‿₊୨୧₊‿︵‧ ˚ ₊⊹</h2>
+        <h2 className="xs:text-sm sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl  pt-10">
+          ⊹₊ ˚‧︵‿₊୨୧₊‿︵‧ ˚ ₊⊹
+        </h2>
       </div>
     </section>
   );

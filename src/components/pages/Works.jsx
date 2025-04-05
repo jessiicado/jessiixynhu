@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Works = () => {
   // Define Project component to animate using ScrollTrigger
-  function Project({id}) {
+  function Project({ id }) {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref });
 
@@ -22,7 +22,7 @@ const Works = () => {
         if (window.innerWidth >= 640) {
           setYValues([40, -100]); // Smaller shift for small screens
         } else if (window.innerWidth >= 1024) {
-          setYValues([-50, -50]); // Medium shift for tablets
+          setYValues([-100, -200]); // Medium shift for tablets
         } else if (window.innerWidth >= 1280) {
           setYValues([-50, -600]); // Medium shift for tablets
         } else if (window.innerWidth >= 320) {
@@ -42,9 +42,9 @@ const Works = () => {
 
     return (
       <motion.h1
-      id={`project-title-${id}`}
+        id={`project-title-${id}`}
         ref={ref}
-        className="xs:text-[2rem] xs:pl-5 text-[5rem] justify-center items-center md:text-[7rem] lg:text-[10rem] xl:text-[15rem] 2xl:text-[20rem] 2xl:pb-10 pb-20 z-0"
+        className="xs:text-[4rem] xs:tracking-widest text-[5rem] pb-10 z-0 sm:text-[8rem] md:text-[9rem] md:tracking-widest lg:tracking-widest lg:text-[11rem] xl:text-[15rem] 2xl:text-[20rem] 2xl:pb-10 justify-center items-center"
         style={{ y }}
       >
         PROJECTS
@@ -85,7 +85,6 @@ const Works = () => {
     id: PropTypes.number, // or PropTypes.string, depending on usage
   };
 
-  
   return (
     <section id="Projects" className="Projects h-full w-full relative">
       <div className="Project-header -z-1 overflow-hidden" id="project-header">
@@ -93,11 +92,11 @@ const Works = () => {
       </div>
 
       {/* Project Cards */}
-      <div className="cards grid md:grid-cols-2 lg:grid-cols-3 gap-10 xs:px-18 px-25 lg:px-10 xl:px-10">
+      <div className="cards grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 xs:justify-center xs:grid-cols-1 xs:gap-5 sm:px-10 sm:justify-center sm:items-center md:gap-15 lg:justify-center lg:gap-5 xl:px-10 xl:gap-20 2xl:gap-10 xl:gap-10 2xl:gap-10 justify-items-center items-center">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group bg-zinc-800 rounded-md overflow-hidden xs:w-[15rem] shadow-lg transition-all duration-300 hover:scale-105"
+            className="group bg-zinc-800 rounded-md overflow-hidden xs:w-[15rem] sm:w-full sm:h-full md:w-full lg:w-full lg:h-full xl:w-[25rem] xl:h-full 2xl:w-full 2xl:h-full shadow-lg transition-all duration-300 hover:scale-105"
           >
             <a
               href={project.link}
@@ -108,7 +107,7 @@ const Works = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-100 xs:h-40 md:h-45 lg:w-full lg:h-75 xl:w-full xl:h-150 object-cover"
+                className="w-full h-full object-cover"
               />
               <div className="p-4 md:p-6 lg:p-6 xl:p-6">
                 <h3 className="text-2xl py-2 md:py-2 lg:text-3xl xl:text-3xl lg:pb-5 xl:pb-5 font-semibold mb-2 font-inter font-medium">

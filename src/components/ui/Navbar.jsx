@@ -179,9 +179,9 @@ function Navbar() {
         <nav className="Navigation">
           {/* NAV BAR LINKS */}
           <ul
-            className={`nav-links font-medium space-y-4 md:space-y-0 md:flex md:items-center md:justify-end ${
+            className={`nav-links transition-all duration-500 ease-in-out font-medium space-y-4 md:space-y-0 md:flex md:items-center md:justify-end ${
               menuOpen
-                ? "flex flex-col absolute top-16 right-4 bg-white shadow-lg p-6 rounded-lg"
+                ? "flex flex-col absolute top-16 right-4 bg-zinc-400 shadow-lg p-6 rounded-lg"
                 : "hidden"
             } md:flex md:space-x-6`}
           >

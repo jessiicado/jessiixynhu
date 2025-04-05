@@ -72,21 +72,9 @@ function Hero() {
     tl.to(transitionImage.current, {
       opacity: 1,
       scale: 1.2,
-      duration: 2.5,
+      duration: 3,
       ease: "power3.inOut",
     });
-
-    // Title appears from above and eases down
-    tl.to(
-      titleRef.current,
-      {
-        y: 100, // Moves down into view
-        opacity: 1,
-        duration: 1.5,
-        ease: "power3.out",
-      },
-      "+=0.3"
-    );
 
     // Name appears from above and eases down
     tl.to(
@@ -97,8 +85,20 @@ function Hero() {
         duration: 1.5,
         ease: "power3.out",
       },
-      "-=1.7"
+      "+=0"
     ); // Slight overlap with image animation
+
+    // Title appears from above and eases down
+    tl.to(
+      titleRef.current,
+      {
+        y: 100, // Moves down into view
+        opacity: 1,
+        duration: 2.5,
+        ease: "power3.out",
+      },
+      "+=0.1"
+    );
   }, []);
 
   return (
@@ -107,8 +107,8 @@ function Hero() {
       className="hero relative flex w-full h-full z-50 items-center justify-center"
       aria-label="hero"
     >
-      <div className="flex flex-col h-screen w-full items-center 2xl:text-[2rem] lg:text-3xl md:text-[1.5rem] font-gambarino lowercase">
-        <div className="title 2xl:py-0 translate-y-[12rem] flex flex-col xs:translate-y-[15rem] xs:gap-y-[15rem] xs:translate-y-[20rem]  s:gap-y-[18rem] gap-y-[25rem] md:gap-y-[30rem] lg:translate-y-[30rem] xl:gap-y-[32rem] 2xl:gap-y-[35rem] z-50 2xl:translate-y-[15rem]">
+      <div className="flex flex-col h-screen w-full items-center xs:text-md sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl 2xl:text-3xl font-gambarino lowercase">
+        <div className="title flex flex-col items-center justify-center text-center z-10 xs:gap-50 xs:translate-y-60 sm:gap-100 sm:translate-y-60 md:gap-120 md:translate-y-60 lg:gap-130 lg:translate-y-60 xl:gap-130 xl:translate-y-60 2xl:gap-130 2xl:translate-y-60">
           <h1
             ref={titleRef}
             className="opacity-0 justify-center items-center"

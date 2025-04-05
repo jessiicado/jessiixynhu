@@ -82,40 +82,37 @@ const About = () => {
     >
       <div className="leftcontainer flex-1 w-1/2 h-full">
         <img
-          className="h-full w-full lg:p-20 xl:p-20 object-cover"
+          className="h-full w-full lg:w-full lg:h-full xl:p-20 object-cover"
           src={nature}
           alt="about-image"
         />
       </div>
 
-      <div className="rightcontainer fixed top-0 right-0 h-screen w-1/2 flex flex-col justify-center items-start p-5 2xl:px-20 bg-opacity-80">
+      <div className="rightcontainer h-screen w-1/2 p-5 md:py-15 lg:px-10 2xl:px-20 bg-opacity-80 flex flex-col justify-center items-start fixed top-0 right-0 ">
         <div className="about-title grid text-stone-900 tracking-widest">
-          <h1 className="xs:text-4xl xs:pb-0 text-6xl lg:text-7xl xl:text-8xl font-gambarino font-black tracking-wider text-center pb-5">
+          <h1 className="xs:text-3xl xs:pb-0 text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-gambarino font-black tracking-wider text-center pb-5">
             jessica
           </h1>
         </div>
 
-        <div className="viet xs:text-[0.6rem] xs:py-2 whitespace-nowrap flex justify-center gap-y-20 items-center font-courier pb-2 lg:pb-10 xl:pb-10">
-          <h2 className=" text-md lg:text-2xl xl:text-2xl font-medium">
-            [jeh-see-cuh]
-          </h2>
-          <p className=" font-bold text-md xl:text-lg lg:text-lg">
-            • Vietnamese
-          </p>
+        <div className="viet xs:text-[0.7rem] xs:text-nowrap xs:py-2 sm:text-[1rem] md:text-xl pb-2 lg:py-10 xl:pb-10 whitespace-nowrap flex justify-center gap-y-20 items-center font-courier">
+          <h2 className="font-medium">[jeh-see-cuh]</h2>
+          <p className=" font-bold">• Vietnamese</p>
         </div>
 
         <div className="info">
-          <p className="xs:text-xs text-md lg:text-2xl text-start leading-relaxed lg:pb-5 xl:pb-10 2xl:text-3xl font-inter">
+          <p className="xs:text-xs text-md md:text-xl lg:text-2xl text-start leading-relaxed lg:pb-5 xl:pb-10 2xl:text-3xl font-inter">
             Hi! I'm a 2nd year majoring in Computer Science with a passion for
-            technology and creativity. I'm excited about exploring the world of
-            programming, web development, and digital design. I love capturing
-            moments and turning them into stories through photography and
-            videography. Feel free to explore my work, and please reach out to
-            connect!
+            software and building full stack applications! I'm excited about
+            exploring the world of programming, web development, and digital
+            design. I am passionate about continuous learning, currently
+            exploring machine learning and advanced web technologies to further
+            enhance my skill set. Feel free to explore my work, and please reach
+            out to connect!
           </p>
         </div>
 
-        <div className="techstack flex justify-center pt-5 xs:scale-55 scale-75 xl:scale-100 items-center gap-x-5">
+        <div className="techstack flex justify-center sm:pt-15 sm:scale-75 items-center gap-x-5 xs:scale-50 md:scale-100 md:p-5 xl:scale-100 ">
           <ul className="flex flex-row gap-5 lg:gap-x-5 xl:gap-x-5 flex-wrap">
             <li>
               {/* java */}
@@ -252,6 +249,27 @@ const About = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
+              </svg>
+            </li>
+            <li>
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clipPath="url(#clip0_156_5)">
+                  <path
+                    d="M34.386 19.11C31.858 7.95 25.882 4.282 25.24 2.88C24.68 2.092 24.18 0.972 23.77 0C23.698 0.99 23.66 1.37 22.724 2.368C21.278 3.5 13.848 9.732 13.244 22.408C12.68 34.232 21.784 41.278 23.02 42.176L23.16 42.276C23.4174 44.1795 23.6374 46.0879 23.82 48H24.782C25.01 45.936 25.35 43.888 25.802 41.86C26.636 41.268 27.01 40.934 27.502 40.474C29.8319 38.3186 31.6836 35.6982 32.9372 32.7823C34.1909 29.8663 34.8187 26.7198 34.78 23.546C34.8 21.918 34.574 20.222 34.386 19.11ZM23.714 35.5C23.714 35.5 23.714 18.918 24.264 18.92C24.69 18.92 25.244 40.31 25.244 40.31C24.482 40.22 23.714 36.79 23.714 35.5Z"
+                    fill="black"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_156_5">
+                    <rect width="48" height="48" fill="white" />
+                  </clipPath>
+                </defs>
               </svg>
             </li>
           </ul>
