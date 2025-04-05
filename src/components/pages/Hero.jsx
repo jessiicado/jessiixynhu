@@ -82,10 +82,10 @@ function Hero() {
       {
         y: 20, // Moves down into view
         opacity: 1,
-        duration: 1.5,
+        duration: 2.5,
         ease: "power3.out",
       },
-      "+=0"
+      "+=0.7"
     ); // Slight overlap with image animation
 
     // Title appears from above and eases down
@@ -97,7 +97,7 @@ function Hero() {
         duration: 2.5,
         ease: "power3.out",
       },
-      "+=0.1"
+      "-=0.7"
     );
   }, []);
 

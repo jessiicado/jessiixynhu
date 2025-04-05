@@ -56,7 +56,7 @@ const Works = () => {
     {
       title: "Portfolio Website",
       alt: "portfolio-website",
-      link: "http://localhost:5173/#Projects",
+      link: "http://jessiicado.com",
       tech: ["2025", "HTML • CSS • JS", "REACT", "TAILWINDCSS"],
       description: "You're already here!",
       image: darkHero,
@@ -73,7 +73,7 @@ const Works = () => {
     {
       title: "Stock Market Simulator Discord Bot",
       alt: "portfolio-website",
-      link: "https://github.com/jessiicado/calculator",
+      link: "https://github.com/jessiicado/stockmarket-bot",
       tech: ["2025", "NODE.JS", "WORK-IN-PROGRESS"],
       description:
         "A Discord bot that simulates stock trading with virtual currency, letting users buy, sell, and track stocks while mimicking real market trends.",
