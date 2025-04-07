@@ -108,7 +108,7 @@ function Hero() {
       aria-label="hero"
     >
       <div className="flex flex-col h-screen w-full items-center xs:text-md sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl 2xl:text-3xl font-gambarino lowercase">
-        <div className="title flex flex-col items-center justify-center text-center z-10 xs:gap-50 xs:translate-y-60 sm:gap-100 sm:translate-y-60 md:gap-120 md:translate-y-60 lg:gap-130 lg:translate-y-60 xl:gap-130 xl:translate-y-60 2xl:gap-130 2xl:translate-y-60">
+        <div className="title flex flex-col items-center justify-center text-center z-10 xs:gap-50 xs:translate-y-60 sm:gap-100 sm:translate-y-60 s:gap-70 md:gap-120 md:translate-y-60 lg:gap-130 lg:translate-y-60 xl:gap-130 xl:translate-y-60 2xl:gap-130 2xl:translate-y-60">
           <h1
             ref={titleRef}
             className="opacity-0 justify-center items-center"
