@@ -23,7 +23,7 @@ function Navbar() {
 
   const ResumeRoute = () => {
     window.open(
-      "https://drive.google.com/file/d/1xqHTMJ91v9HSMU4iIPU8O-5ifcLauHVu/view?usp=sharing",
+      "https://drive.google.com/file/d/1LH8Lggvoi1BKTJ0Kckeyt-Tz4QUke85T/view?usp=sharing",
       "_blank"
     );
   };
